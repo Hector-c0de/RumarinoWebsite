@@ -14,7 +14,7 @@ export default function Home() {
           muted
           playsInline
           className="absolute top-1/2 left-1/2 w-full h-full min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2 z-0"
-          poster="https://placehold.co/1920x1080/002244/ffffff.png"
+          poster="https://placehold.co/1920x1080/004d40/ffffff.png"
         >
           {/* Placeholder video, replace with an actual underwater video */}
           <source src="https://videos.pexels.com/video-files/853894/853894-hd_1920_1080_25fps.mp4" type="video/mp4" />
@@ -35,7 +35,7 @@ export default function Home() {
           <Card className="overflow-hidden shadow-2xl transition-shadow hover:shadow-primary/20 md:grid md:grid-cols-2 md:gap-8 items-center">
             <div className="md:order-2">
               <Image
-                src="https://placehold.co/1200x800.png"
+                src="https://placehold.co/1200x800/26A69A/FFFFFF.png"
                 alt="Rumarino team with Hydrus AUV"
                 width={1200}
                 height={800}

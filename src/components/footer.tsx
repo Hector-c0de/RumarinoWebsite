@@ -4,10 +4,10 @@ import { Logo } from './logo';
 import Image from 'next/image';
 
 const sponsors = [
-  { name: 'Sponsor 1', logoUrl: 'https://placehold.co/150x50.png', hint: 'sponsor logo' },
-  { name: 'Sponsor 2', logoUrl: 'https://placehold.co/150x50.png', hint: 'sponsor logo' },
-  { name: 'Sponsor 3', logoUrl: 'https://placehold.co/150x50.png', hint: 'sponsor logo' },
-  { name: 'Sponsor 4', logoUrl: 'https://placehold.co/150x50.png', hint: 'sponsor logo' },
+  { name: 'Sponsor 1', logoUrl: 'https://placehold.co/150x50/CFD8DC/FFFFFF.png', hint: 'sponsor logo' },
+  { name: 'Sponsor 2', logoUrl: 'https://placehold.co/150x50/B0BEC5/FFFFFF.png', hint: 'sponsor logo' },
+  { name: 'Sponsor 3', logoUrl: 'https://placehold.co/150x50/90A4AE/FFFFFF.png', hint: 'sponsor logo' },
+  { name: 'Sponsor 4', logoUrl: 'https://placehold.co/150x50/78909C/FFFFFF.png', hint: 'sponsor logo' },
 ];
 
 const Footer = () => {
