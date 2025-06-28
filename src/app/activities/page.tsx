@@ -62,7 +62,7 @@ const activities = [
         type: 'image',
       },
        {
-        src: '/pickleball_4.png',
+        src: '/pickleball_4.jpeg',
         hint: 'pickleball action shot',
         type: 'image',
       },
