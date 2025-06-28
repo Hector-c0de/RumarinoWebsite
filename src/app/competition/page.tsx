@@ -6,7 +6,7 @@ export default function CompetitionPage() {
     <div className="container mx-auto px-4 py-16">
       <Card className="max-w-3xl mx-auto">
         <CardHeader className="text-center">
-          <div className="mx-auto bg-primary/10 text-primary p-3 rounded-full w-fit mb-4">
+          <div className="mx-auto bg-accent/10 text-accent p-3 rounded-full w-fit mb-4">
             <Trophy className="h-10 w-10" />
           </div>
           <CardTitle className="font-headline text-4xl">RoboSub 2025</CardTitle>

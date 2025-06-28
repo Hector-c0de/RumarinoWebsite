@@ -21,10 +21,10 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-primary text-primary-foreground">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-          <Logo className="h-8 w-8 text-primary" />
+          <Logo className="h-8 w-8 text-accent" />
           <span className="font-headline text-2xl font-bold hidden sm:inline-block">Rumarino</span>
         </Link>
 
@@ -34,8 +34,8 @@ const Header = () => {
               key={link.href}
               href={link.href}
               className={cn(
-                'font-medium text-muted-foreground transition-colors hover:text-primary',
-                pathname === link.href && 'text-primary'
+                'font-medium transition-colors',
+                pathname === link.href ? 'text-primary-foreground' : 'text-primary-foreground/80 hover:text-primary-foreground'
               )}
             >
               {link.label}
@@ -46,7 +46,7 @@ const Header = () => {
         <div className="md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
+              <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-primary/90">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
@@ -54,7 +54,7 @@ const Header = () => {
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <div className="flex justify-between items-center mb-8">
                  <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-                    <Logo className="h-8 w-8 text-primary" />
+                    <Logo className="h-8 w-8 text-accent" />
                     <span className="font-headline text-2xl font-bold">Rumarino</span>
                 </Link>
                 <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
@@ -69,8 +69,8 @@ const Header = () => {
                     href={link.href}
                     onClick={() => setIsOpen(false)}
                     className={cn(
-                      'text-lg font-medium text-muted-foreground transition-colors hover:text-primary',
-                      pathname === link.href && 'text-primary'
+                      'text-lg font-medium text-muted-foreground transition-colors hover:text-accent',
+                      pathname === link.href && 'text-accent'
                     )}
                   >
                     {link.label}

@@ -6,7 +6,7 @@ export default function AUVsPage() {
     <div className="container mx-auto px-4 py-16">
       <Card className="max-w-3xl mx-auto">
         <CardHeader className="text-center">
-          <div className="mx-auto bg-primary/10 text-primary p-3 rounded-full w-fit mb-4">
+          <div className="mx-auto bg-accent/10 text-accent p-3 rounded-full w-fit mb-4">
              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="40"

@@ -45,7 +45,7 @@ export default function Home() {
             </div>
             <div className="p-8 md:p-12 md:order-1">
               <CardHeader>
-                <CardTitle className="font-headline text-3xl md:text-4xl text-primary">
+                <CardTitle className="font-headline text-3xl md:text-4xl text-accent">
                   Meet the Team & Our AUV
                 </CardTitle>
                 <CardDescription className="text-lg mt-2">
