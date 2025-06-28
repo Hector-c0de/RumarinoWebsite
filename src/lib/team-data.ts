@@ -4,6 +4,8 @@ export type TeamMember = {
   year: string;
   major: string;
   hint?: string;
+  linkedinUrl?: string;
+  email?: string;
 };
 
 export type Team = {
@@ -23,9 +25,9 @@ export const teams: Team[] = [
     teamImage: '/managment_team.jpeg',
     teamImageHint: 'Photo of the management team',
     members: [
-      { name: 'Alex Johnson', photoUrl: 'https://placehold.co/400x400/3B82F6/FFFFFF', hint: 'professional headshot', year: '4th Year', major: 'Business Administration' },
-      { name: 'Brenda Smith', photoUrl: 'https://placehold.co/400x400/3B82F6/FFFFFF', hint: 'professional headshot', year: '3rd Year', major: 'Marketing' },
-      { name: 'Charles Brown', photoUrl: 'https://placehold.co/400x400/3B82F6/FFFFFF', hint: 'professional headshot', year: '4th Year', major: 'Finance' },
+      { name: 'Alex Johnson', photoUrl: 'https://placehold.co/400x400/3B82F6/FFFFFF', hint: 'professional headshot', year: '4th Year', major: 'Business Administration', linkedinUrl: '#', email: 'mailto:alex.j@example.com' },
+      { name: 'Brenda Smith', photoUrl: 'https://placehold.co/400x400/3B82F6/FFFFFF', hint: 'professional headshot', year: '3rd Year', major: 'Marketing', linkedinUrl: '#', email: 'mailto:brenda.s@example.com' },
+      { name: 'Charles Brown', photoUrl: 'https://placehold.co/400x400/3B82F6/FFFFFF', hint: 'professional headshot', year: '4th Year', major: 'Finance', linkedinUrl: '#', email: 'mailto:charles.b@example.com' },
     ],
   },
   {
@@ -35,12 +37,12 @@ export const teams: Team[] = [
     teamImage: '/computer_system_team.jpeg',
     teamImageHint: 'students coding computer lab',
     members: [
-      { name: 'Cesar', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd Year', major: 'Computer Science' },
-      { name: 'Edyan', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '2nd Year', major: 'Software Engineering' },
-      { name: 'Hector', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '4th Year', major: 'Computer Engineering' },
-      { name: 'Gabriela', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd Year', major: 'Computer Science' },
-      { name: 'Javier', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd Year', major: 'Computer Science' },
-      { name: 'Elian', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd Year', major: 'Computer Science' },
+      { name: 'Cesar', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd Year', major: 'Computer Science', linkedinUrl: '#', email: 'mailto:cesar@example.com' },
+      { name: 'Edyan', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '2nd Year', major: 'Software Engineering', linkedinUrl: '#', email: 'mailto:edyan@example.com' },
+      { name: 'Hector', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '4th Year', major: 'Computer Engineering', linkedinUrl: '#', email: 'mailto:hector@example.com' },
+      { name: 'Gabriela', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd Year', major: 'Computer Science', linkedinUrl: '#', email: 'mailto:gabriela@example.com' },
+      { name: 'Javier', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd Year', major: 'Computer Science', linkedinUrl: '#', email: 'mailto:javier@example.com' },
+      { name: 'Elian', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd Year', major: 'Computer Science', linkedinUrl: '#', email: 'mailto:elian@example.com' },
     ],
   },
   {
@@ -50,9 +52,9 @@ export const teams: Team[] = [
     teamImage: '/mechanical_team.jpeg',
     teamImageHint: 'engineering students workshop',
     members: [
-      { name: 'David', photoUrl: '/david.jpg', hint: 'engineer headshot', year: '4th Year', major: 'Mechanical Engineering' },
-      { name: 'Veronica', photoUrl: '/veronica.jpg', hint: 'engineer headshot', year: '3rd Year', major: 'Mechanical Engineering' },
-      { name: 'Anibal', photoUrl: 'https://placehold.co/400x400/F97316/FFFFFF', hint: 'engineer headshot', year: '2nd Year', major: 'Aerospace Engineering' },
+      { name: 'David', photoUrl: '/david.jpg', hint: 'engineer headshot', year: '4th Year', major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:david@example.com' },
+      { name: 'Veronica', photoUrl: '/veronica.jpg', hint: 'engineer headshot', year: '3rd Year', major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:veronica@example.com' },
+      { name: 'Anibal', photoUrl: 'https://placehold.co/400x400/F97316/FFFFFF', hint: 'engineer headshot', year: '2nd Year', major: 'Aerospace Engineering', linkedinUrl: '#', email: 'mailto:anibal@example.com' },
     ],
   },
   {
@@ -62,10 +64,10 @@ export const teams: Team[] = [
     teamImage: '/electrical_team.jpeg',
     teamImageHint: 'electronics lab circuit board',
     members: [
-      { name: 'Victor', photoUrl: '/victor.jpg', hint: 'technician headshot', year: '3rd Year', major: 'Electrical Engineering' },
-      { name: 'Mia', photoUrl: '/mia.jpg', hint: 'technician headshot', year: '4th Year', major: 'Electrical Engineering' },
-      { name: 'Angel', photoUrl: '/angel.jpg', hint: 'technician headshot', year: '2nd Year', major: 'Computer Engineering' },
-      { name: 'Natalia', photoUrl: '/natalia.jpg', hint: 'technician headshot', year: '2nd Year', major: 'Computer Engineering' },
+      { name: 'Victor', photoUrl: '/victor.jpg', hint: 'technician headshot', year: '3rd Year', major: 'Electrical Engineering', linkedinUrl: '#', email: 'mailto:victor@example.com' },
+      { name: 'Mia', photoUrl: '/mia.jpg', hint: 'technician headshot', year: '4th Year', major: 'Electrical Engineering', linkedinUrl: '#', email: 'mailto:mia@example.com' },
+      { name: 'Angel', photoUrl: '/angel.jpg', hint: 'technician headshot', year: '2nd Year', major: 'Computer Engineering', linkedinUrl: '#', email: 'mailto:angel@example.com' },
+      { name: 'Natalia', photoUrl: '/natalia.jpg', hint: 'technician headshot', year: '2nd Year', major: 'Computer Engineering', linkedinUrl: '#', email: 'mailto:natalia@example.com' },
     ],
   },
 ];

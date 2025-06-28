@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
-import { ChevronLeft } from 'lucide-react';
+import { ChevronLeft, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 type TeamDetailPageProps = {
@@ -56,7 +56,7 @@ export default function TeamDetailPage({ params }: TeamDetailPageProps) {
           <h2 className="font-headline text-3xl font-bold text-center mb-10">Team Members</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {members.map((member) => (
-              <Card key={member.name} className="text-center overflow-hidden transition-shadow hover:shadow-lg">
+              <Card key={member.name} className="text-center overflow-hidden transition-shadow hover:shadow-lg flex flex-col">
                 <div className="aspect-square bg-muted">
                     <Image
                         src={member.photoUrl}
@@ -67,10 +67,22 @@ export default function TeamDetailPage({ params }: TeamDetailPageProps) {
                         data-ai-hint={member.hint}
                     />
                 </div>
-                <CardContent className="p-4">
+                <CardContent className="p-4 flex flex-col flex-grow">
                   <h3 className="font-bold text-lg">{member.name}</h3>
                   <p className="text-sm text-muted-foreground">{member.major}</p>
                   <Badge variant="secondary" className="mt-2">{member.year}</Badge>
+                  <div className="mt-auto pt-4 flex justify-center gap-4">
+                    {member.linkedinUrl && (
+                      <Link href={member.linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label={`${member.name}'s LinkedIn Profile`}>
+                        <Linkedin className="h-6 w-6 text-muted-foreground hover:text-accent transition-colors" />
+                      </Link>
+                    )}
+                     {member.email && (
+                      <Link href={member.email} aria-label={`Email ${member.name}`}>
+                        <Mail className="h-6 w-6 text-muted-foreground hover:text-accent transition-colors" />
+                      </Link>
+                    )}
+                  </div>
                 </CardContent>
               </Card>
             ))}
