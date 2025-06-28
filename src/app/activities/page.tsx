@@ -36,9 +36,9 @@ const activities = [
     ],
   },
   {
-    title: 'Pickleball Fundraisers',
+    title: 'Fundraising Events',
     description:
-      "Our team hosts fun pickleball tournaments to raise funds for new parts and travel expenses. It's a great way to bond as a team and engage with the community.",
+      "To support our project, we host a variety of fundraising events. Our pickleball tournaments are a great way to bond as a team and engage with the community, while our weekly pizza sales fuel our late-night build sessions and our budget. Every Friday, we sell delicious pizza on campus!",
     gallery: [
       {
         src: '/pickleball_1.png',
@@ -56,17 +56,6 @@ const activities = [
         src: '/pickleball_4.png',
         hint: 'pickleball action shot',
       },
-      {
-        src: '/pickleball_4.png',
-        hint: 'pickleball action shot',
-      },
-    ],
-  },
-  {
-    title: 'Weekly Pizza Sales',
-    description:
-      'Fueling our late-night build sessions and our budget! Every Friday, we sell delicious pizza on campus to support our project.',
-    gallery: [
       {
         src: '/pizza_sale_1.jpg',
         hint: 'pizza food sales',
