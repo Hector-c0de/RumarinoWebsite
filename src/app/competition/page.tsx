@@ -32,9 +32,49 @@ const gallery2024: GalleryItem[] = [
     type: 'video',
   },
   {
-    src: 'https://placehold.co/400x400.png',
+    src: '/robosub_2024_4.jpg',
     hint: 'team celebrating success',
     type: 'image',
+  },
+  {
+    src: '/robosub_2024_5.jpg',
+    hint: 'team at competition',
+    type: 'image',
+  },
+  {
+    src: '/robosub_2024_6.jpg',
+    hint: 'robot performing tasks',
+    type: 'image',
+  },
+  {
+    src: '/robosub_2024_7.jpg',
+    hint: 'team strategizing',
+    type: 'image',
+  },
+  {
+    src: '/robosub_2024_8.jpg',
+    hint: 'robot in action',
+    type: 'image',
+  },
+  {
+    src: '/robosub_2024_9.jpg',
+    hint: 'team celebrating success',
+    type: 'image',
+  },
+  {
+    src: '/robosub_2024_10.mp4',
+    hint: 'team celebrating victory',
+    type: 'video',
+  },
+  {
+    src: '/robosub_2024_11.jpg',
+    hint: 'team celebrating victory',
+    type: 'image',
+  },
+  {
+    src: '/robosub_2024_12.mp4',
+    hint: 'team celebrating victory',
+    type: 'video',
   }
 ];
 
