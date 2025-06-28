@@ -80,56 +80,34 @@ const activities = [
     title: 'Fundraising Events',
     description:
       "To support our project, we host a variety of fundraising events. Our pickleball tournaments are a great way to bond as a team and engage with the community, while our weekly pizza sales fuel our late-night build sessions and our budget. Every Friday, we sell delicious pizza on campus!",
-    gallery: [
+    events: [
       {
-        src: '/pickleball_1.jpeg',
-        hint: 'pickleball tournament sport',
-        type: 'image',
+        name: 'Pickleball Tournament',
+        gallery: [
+          { src: '/pickleball_1.jpeg', hint: 'pickleball tournament sport', type: 'image' },
+          { src: '/pickleball_2.jpeg', hint: 'team playing pickleball', type: 'image' },
+          { src: '/pickleball_3.jpeg', hint: 'community event fundraiser', type: 'image' },
+          { src: '/pickleball_4.jpeg', hint: 'pickleball action shot', type: 'image' },
+          { src: '/pickleball_5.jpg', hint: 'team bonding pickleball', type: 'image' },
+        ] as GalleryItem[],
       },
       {
-        src: '/pickleball_2.jpeg',
-        hint: 'team playing pickleball',
-        type: 'image',
+        name: 'Pizza Sales',
+        gallery: [
+          { src: '/pizza_sale_1.jpg', hint: 'pizza food sales', type: 'image' },
+          { src: '/pizza_sale_2.jpg', hint: 'pizza sale event', type: 'image' },
+          { src: '/pizza_sale_3.jpg', hint: 'students enjoying pizza', type: 'image' },
+        ] as GalleryItem[],
       },
       {
-        src: '/pickleball_3.jpeg',
-        hint: 'community event fundraiser',
-        type: 'image',
+        name: 'Billiards',
+        gallery: [
+          { src: '/billar_1.jpg', hint: 'students playing billiards', type: 'image' },
+        ] as GalleryItem[],
       },
-      {
-        src: '/pickleball_4.jpeg',
-        hint: 'pickleball action shot',
-        type: 'image',
-      },
-      {
-        src: '/pickleball_5.jpg',
-        hint: 'team bonding pickleball',
-        type: 'image',
-      },
-      {
-        src: '/pizza_sale_1.jpg',
-        hint: 'pizza food sales',
-        type: 'image',
-      },
-      {
-        src: '/pizza_sale_2.jpg',
-        hint: 'pizza sale event',
-        type: 'image',
-      },
-      {
-        src: '/pizza_sale_3.jpg',
-        hint: 'students enjoying pizza',
-        type: 'image',
-      },
-      {
-        src: '/billar_1.jpg',
-        hint: 'students buying pizza',
-        type: 'image',
-      },
-    ] as GalleryItem[],
+    ],
   },
 ];
-
 
 export default function ActivitiesPage() {
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
@@ -138,7 +116,6 @@ export default function ActivitiesPage() {
     <>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-
           <h1 className="font-headline text-4xl md:text-5xl font-bold">
             Team Activities
           </h1>
@@ -153,36 +130,69 @@ export default function ActivitiesPage() {
             <React.Fragment key={activity.title}>
               <section>
                 <div className="max-w-4xl mx-auto mb-8">
-                  <h2 className="font-headline text-3xl font-bold mb-4">{activity.title}</h2>
+                  <h2 className="font-headline text-3xl font-bold mb-8 pt-4">{activity.title}</h2>
                   <p className="text-muted-foreground">
                     {activity.description}
                   </p>
                 </div>
-
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {activity.gallery.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className="relative aspect-video rounded-lg overflow-hidden group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow"
-                      onClick={() => setSelectedItem(item)}
-                    >
-                      <Image
-                        src={item.type === 'video' ? item.thumbnail || 'https://placehold.co/600x400.png' : item.src}
-                        alt={`${activity.title} gallery item ${idx + 1}`}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        data-ai-hint={item.hint}
-                      />
-                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        {item.type === 'video' ? (
-                          <PlayCircle className="h-12 w-12 text-white" />
-                        ) : (
-                          <Search className="h-10 w-10 text-white" />
-                        )}
+                {activity.events ? (
+                  <div className="space-y-10">
+                    {activity.events.map((event) => (
+                      <div key={event.name}>
+                        <h3 className="font-headline text-xl font-semibold mb-4 pt-4 text-center">{event.name}</h3>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                          {event.gallery.map((item, idx) => (
+                            <div
+                              key={idx}
+                              className="relative aspect-video rounded-lg overflow-hidden group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow"
+                              onClick={() => setSelectedItem(item)}
+                            >
+                              <Image
+                                src={item.type === 'video' ? item.thumbnail || 'https://placehold.co/600x400.png' : item.src}
+                                alt={`${event.name} gallery item ${idx + 1}`}
+                                fill
+                                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                data-ai-hint={item.hint}
+                              />
+                              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                                {item.type === 'video' ? (
+                                  <PlayCircle className="h-12 w-12 text-white" />
+                                ) : (
+                                  <Search className="h-10 w-10 text-white" />
+                                )}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {activity.gallery.map((item, idx) => (
+                      <div
+                        key={idx}
+                        className="relative aspect-video rounded-lg overflow-hidden group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow"
+                        onClick={() => setSelectedItem(item)}
+                      >
+                        <Image
+                          src={item.type === 'video' ? item.thumbnail || 'https://placehold.co/600x400.png' : item.src}
+                          alt={`${activity.title} gallery item ${idx + 1}`}
+                          fill
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          data-ai-hint={item.hint}
+                        />
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                          {item.type === 'video' ? (
+                            <PlayCircle className="h-12 w-12 text-white" />
+                          ) : (
+                            <Search className="h-10 w-10 text-white" />
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </section>
               {index < activities.length - 1 && <Separator className="my-16" />}
             </React.Fragment>
