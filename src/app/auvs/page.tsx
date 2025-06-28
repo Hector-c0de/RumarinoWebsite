@@ -1,5 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Github, Cog, CircuitBoard } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+import { Cog, CircuitBoard } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -26,35 +27,56 @@ export default function AUVsPage() {
           </div>
         </section>
 
-        <section className="grid md:grid-cols-2 gap-16 items-start">
-          <div className="flex flex-col items-center text-center">
-            <div className="p-4 bg-primary/10 rounded-full mb-4">
-              <Github className="h-10 w-10 text-primary"/>
+        <Separator className="my-8" />
+        
+        <section id="software" className="py-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 className="font-headline text-3xl font-bold mb-4">Software Architecture</h2>
+                    <p className="text-muted-foreground">
+                        Hydrus is powered by a sophisticated software stack running on ROS (Robot Operating System). Our custom computer vision, state estimation, and path planning algorithms enable fully autonomous operation in complex underwater environments.
+                    </p>
+                </div>
+                <div>
+                    <Link href="#" target="_blank" rel="noopener noreferrer" className="group block">
+                        <Card className="overflow-hidden transition-shadow hover:shadow-xl">
+                            <CardHeader>
+                                <CardTitle>Software Stack</CardTitle>
+                            </CardHeader>
+                            <CardContent className="p-0">
+                                <div className="relative aspect-video">
+                                    <Image
+                                        src="https://placehold.co/800x450.png"
+                                        alt="Rumarino GitHub Repository"
+                                        fill
+                                        className="object-cover transition-transform group-hover:scale-105"
+                                        data-ai-hint="github repository screenshot"
+                                    />
+                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                                        <span className="text-white font-bold text-lg opacity-0 group-hover:opacity-100 transition-opacity">Explore on GitHub</span>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </Link>
+                </div>
             </div>
-            <h2 className="font-headline text-3xl font-bold mb-4">Software Architecture</h2>
-            <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-              Hydrus is powered by a sophisticated software stack running on ROS (Robot Operating System). Our custom computer vision, state estimation, and path planning algorithms enable fully autonomous operation in complex underwater environments.
-            </p>
-            <Button asChild size="lg">
-              <Link href="#" target="_blank" rel="noopener noreferrer">
-                <Github className="mr-2 h-5 w-5" />
-                Explore on GitHub
-              </Link>
-            </Button>
-          </div>
-
-          <div className="flex flex-col items-center text-center">
-             <div className="p-4 bg-accent/10 rounded-full mb-4 flex gap-4">
-              <Cog className="h-10 w-10 text-accent"/>
-              <CircuitBoard className="h-10 w-10 text-accent"/>
-            </div>
-            <h2 className="font-headline text-3xl font-bold mb-4">Integrated Design</h2>
-            <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-              Featuring a modular, pressure-rated chassis and a distributed power system with custom PCBs, Hydrus is built for reliability and ease of maintenance. Its hydrodynamic profile and powerful thrusters provide exceptional maneuverability.
-            </p>
-          </div>
         </section>
 
+        <Separator className="my-8" />
+
+        <section id="design" className="py-8">
+            <div className="flex flex-col items-center text-center">
+                <div className="p-4 bg-accent/10 rounded-full mb-4 flex gap-4">
+                    <Cog className="h-10 w-10 text-accent"/>
+                    <CircuitBoard className="h-10 w-10 text-accent"/>
+                </div>
+                <h2 className="font-headline text-3xl font-bold mb-4">Integrated Design</h2>
+                <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                    Featuring a modular, pressure-rated chassis and a distributed power system with custom PCBs, Hydrus is built for reliability and ease of maintenance. Its hydrodynamic profile and powerful thrusters provide a unique combination of stability and agility.
+                </p>
+            </div>
+        </section>
       </div>
     </div>
   );
