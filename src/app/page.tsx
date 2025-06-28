@@ -37,39 +37,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="w-full bg-background py-16 md:py-24">
+      <section id="technology" className="w-full bg-background py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="font-headline text-3xl font-bold text-accent md:text-5xl">
-              Explore Our Team &amp; Technology
+              Explore Our Technology
             </h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+              Dive into the technical specifications of our advanced autonomous underwater vehicle.
+            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <Link href="/team" className="group block">
-              <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary/50 hover:-translate-y-1">
-                <div className="relative aspect-video">
-                  <Image
-                    src="/outreach_1.jpg"
-                    alt="Rumarino Team"
-                    fill
-                    className="object-cover transition-transform group-hover:scale-105"
-                    data-ai-hint="robotics team group photo"
-                  />
-                </div>
-                <CardHeader>
-                  <CardTitle>Meet the Team</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">Discover the talented students and mentors driving our mission forward.</p>
-                </CardContent>
-              </Card>
-            </Link>
+          <div className="max-w-4xl mx-auto">
             <Link href="/auvs" className="group block">
-              <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary/50 hover:-translate-y-1">
+              <Card className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary/50 hover:-translate-y-1">
                 <div className="relative aspect-video">
                   <Image
                     src="/hydrus_photo_1.jpeg"
-                    alt="Hydrus AUV"
+                    alt="Hydrus AUV in Water"
                     fill
                     className="object-cover transition-transform group-hover:scale-105"
                     data-ai-hint="underwater robot vehicle"
@@ -80,6 +64,40 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">Dive into the technical specifications of our advanced AUV.</p>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="w-full bg-card py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="font-headline text-3xl font-bold text-accent md:text-5xl">
+              Meet Our Team
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+              Discover the talented students and mentors driving our mission forward.
+            </p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <Link href="/team" className="group block">
+              <Card className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary/50 hover:-translate-y-1">
+                <div className="relative aspect-video">
+                  <Image
+                    src="/outreach_1.jpg"
+                    alt="Rumarino Team at Outreach Event"
+                    fill
+                    className="object-cover transition-transform group-hover:scale-105"
+                    data-ai-hint="robotics team group photo"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle>Meet the Team</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Discover the talented students and mentors driving our mission forward.</p>
                 </CardContent>
               </Card>
             </Link>
