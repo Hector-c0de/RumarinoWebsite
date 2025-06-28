@@ -32,7 +32,7 @@ export default function Home() {
             />
           </div>
           <p className="font-body text-xl md:text-2xl max-w-2xl mx-auto text-primary-foreground/90">
-            Diving into the future of autonomous underwater robotics.
+            We are the first group of college students in the Caribbean to create an autonomous underwater vehicle (AUV) that is competing in the RoboSub competition.
           </p>
         </div>
       </section>
