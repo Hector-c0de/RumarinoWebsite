@@ -50,9 +50,9 @@ export const teams: Team[] = [
     teamImage: '/mechanical_team.jpeg',
     teamImageHint: 'engineering students workshop',
     members: [
-      { name: 'David', photoUrl: 'https://placehold.co/400x400/F97316/FFFFFF', hint: 'engineer headshot', year: '4th Year', major: 'Mechanical Engineering' },
+      { name: 'David', photoUrl: '/david.jpg', hint: 'engineer headshot', year: '4th Year', major: 'Mechanical Engineering' },
       { name: 'Veronica', photoUrl: '/veronica.jpg', hint: 'engineer headshot', year: '3rd Year', major: 'Mechanical Engineering' },
-      { name: 'Jack Wright', photoUrl: 'https://placehold.co/400x400/F97316/FFFFFF', hint: 'engineer headshot', year: '2nd Year', major: 'Aerospace Engineering' },
+      { name: 'Anibal', photoUrl: 'https://placehold.co/400x400/F97316/FFFFFF', hint: 'engineer headshot', year: '2nd Year', major: 'Aerospace Engineering' },
     ],
   },
   {
@@ -62,9 +62,10 @@ export const teams: Team[] = [
     teamImage: '/electrical_team.jpeg',
     teamImageHint: 'electronics lab circuit board',
     members: [
-      { name: 'Karen Adams', photoUrl: 'https://placehold.co/400x400/EAB308/FFFFFF', hint: 'technician headshot', year: '3rd Year', major: 'Electrical Engineering' },
-      { name: 'Leo Clark', photoUrl: 'https://placehold.co/400x400/EAB308/FFFFFF', hint: 'technician headshot', year: '4th Year', major: 'Electrical Engineering' },
-      { name: 'Mia Lewis', photoUrl: 'https://placehold.co/400x400/EAB308/FFFFFF', hint: 'technician headshot', year: '2nd Year', major: 'Computer Engineering' },
+      { name: 'Victor', photoUrl: '/victor.jpg', hint: 'technician headshot', year: '3rd Year', major: 'Electrical Engineering' },
+      { name: 'Mia', photoUrl: '/mia.jpg', hint: 'technician headshot', year: '4th Year', major: 'Electrical Engineering' },
+      { name: 'Angel', photoUrl: '/angel.jpg', hint: 'technician headshot', year: '2nd Year', major: 'Computer Engineering' },
+      { name: 'Natalia', photoUrl: '/natalia.jpg', hint: 'technician headshot', year: '2nd Year', major: 'Computer Engineering' },
     ],
   },
 ];
