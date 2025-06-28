@@ -58,7 +58,10 @@ export const teams: Team[] = [
       { name: 'David', photoUrl: '/david.jpg', hint: 'engineer headshot', year: '4th', major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:david@example.com', rotation: -90 },
       { name: 'Veronica', photoUrl: '/veronica.jpg', hint: 'engineer headshot', year: '3rd', major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:veronica@example.com', rotation: -90 },
       { name: 'Anibal', photoUrl: 'https://placehold.co/400x400/F97316/FFFFFF', hint: 'engineer headshot', year: '2nd', major: 'Aerospace Engineering', linkedinUrl: '#', email: 'mailto:anibal@example.com', rotation: -90 },
-      { name: 'Ricardo', photoUrl: '/ricardo.jpg', hint: 'engineer headshot', year: '3rd', major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:carlos@example.com', rotation: -90 }
+      { name: 'Ricardo', photoUrl: '/ricardo.jpg', hint: 'engineer headshot', year: '3rd', major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:carlos@example.com', rotation: -90 },
+      { name: 'Alejandro', photoUrl: '/alejandro.jpg', hint: 'engineer headshot', year: '3rd', major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:carlos@example.com', rotation: -90 },
+      { name: 'Lisangelie', photoUrl: '/lizmari.jpg', hint: 'engineer headshot', year: '3rd', major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:carlos@example.com', rotation: -90 },
+      { name: 'Ashley', photoUrl: '/lizmari.jpg', hint: 'engineer headshot', year: '3rd', major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:carlos@example.com', rotation: -90 }
       
     ],
   },
