@@ -4,10 +4,11 @@ import { Logo } from './logo';
 import Image from 'next/image';
 
 const sponsors = [
-  { name: 'Sponsor 1', logoUrl: 'https://placehold.co/150x50/CFD8DC/FFFFFF.png', hint: 'sponsor logo' },
-  { name: 'Sponsor 2', logoUrl: 'https://placehold.co/150x50/B0BEC5/FFFFFF.png', hint: 'sponsor logo' },
-  { name: 'Sponsor 3', logoUrl: 'https://placehold.co/150x50/90A4AE/FFFFFF.png', hint: 'sponsor logo' },
-  { name: 'Sponsor 4', logoUrl: 'https://placehold.co/150x50/78909C/FFFFFF.png', hint: 'sponsor logo' },
+  { name: 'Logo Boeing', logoUrl: '/Logo Boeing.png', hint: 'sponsor logo' },
+  { name: 'Logo Colegio (1)', logoUrl: '/Logo Colegio (1).png', hint: 'sponsor logo' },
+  { name: 'Logo GM (1)', logoUrl: '/Logo GM (1).png', hint: 'sponsor logo' },
+  { name: 'Logo LM', logoUrl: '/Logo LM.png', hint: 'sponsor logo' },
+  { name: 'Logo navsea', logoUrl: '/Logo navsea.jpg', hint: 'sponsor logo' },
 ];
 
 const Footer = () => {
