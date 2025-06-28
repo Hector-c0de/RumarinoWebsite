@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Search, PlayCircle } from 'lucide-react';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Separator } from '@/components/ui/separator';
 
 type GalleryItem = {
@@ -158,6 +158,9 @@ export default function ActivitiesPage() {
         }}
       >
         <DialogContent className="max-w-5xl w-full p-0 border-0 bg-transparent shadow-none">
+          <DialogHeader className="sr-only">
+            <DialogTitle>Expanded Media View</DialogTitle>
+          </DialogHeader>
           {selectedItem && (
             <>
               {selectedItem.type === 'image' ? (

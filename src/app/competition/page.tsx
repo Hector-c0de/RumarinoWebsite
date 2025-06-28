@@ -6,7 +6,7 @@ import { Separator } from "@/components/ui/separator";
 import { FileText, Trophy, Video, Camera, Search, PlayCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 
 type GalleryItem = {
   src: string;
@@ -157,6 +157,9 @@ export default function CompetitionPage() {
         }}
       >
         <DialogContent className="max-w-5xl w-full p-0 border-0 bg-transparent shadow-none">
+          <DialogHeader className="sr-only">
+            <DialogTitle>Expanded Media View</DialogTitle>
+          </DialogHeader>
           {selectedItem && (
             <>
               {selectedItem.type === 'image' ? (
