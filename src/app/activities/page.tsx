@@ -103,6 +103,7 @@ const activities = [
         name: 'Billiards',
         gallery: [
           { src: '/billar_1.jpg', hint: 'students playing billiards', type: 'image' },
+          { src: '/billiar_2.jpg', hint: 'team enjoying billiards', type: 'image' },
         ] as GalleryItem[],
       },
     ],
