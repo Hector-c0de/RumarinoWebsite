@@ -18,11 +18,11 @@ const activities = [
       'We believe in sharing our passion for robotics. We regularly visit local schools and community centers to demonstrate our AUV and inspire the next generation of engineers.',
     gallery: [
       {
-        src: 'https://placehold.co/600x400.png',
+        src: '/outreach_1.jpg',
         hint: 'students robotics workshop',
       },
       {
-        src: 'https://placehold.co/600x400.png',
+        src: '/outreach_2.png',
         hint: 'robot demonstration',
       },
       {
@@ -41,19 +41,23 @@ const activities = [
       "Our team hosts fun pickleball tournaments to raise funds for new parts and travel expenses. It's a great way to bond as a team and engage with the community.",
     gallery: [
       {
-        src: 'https://placehold.co/600x400.png',
+        src: '/pickleball_1.png',
         hint: 'pickleball tournament sport',
       },
       {
-        src: 'https://placehold.co/600x400.png',
+        src: '/pickleball_2.png',
         hint: 'team playing pickleball',
       },
       {
-        src: 'https://placehold.co/600x400.png',
+        src: '/pickleball_3.png',
         hint: 'community event fundraiser',
       },
        {
-        src: 'https://placehold.co/600x400.png',
+        src: '/pickleball_4.png',
+        hint: 'pickleball action shot',
+      },
+      {
+        src: '/pickleball_4.png',
         hint: 'pickleball action shot',
       },
     ],
