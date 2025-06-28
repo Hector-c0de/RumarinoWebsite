@@ -22,7 +22,7 @@ const activities = [
         hint: 'students robotics workshop',
       },
       {
-        src: '/outreach_2.png',
+        src: '/outreach_2.jpeg',
         hint: 'robot demonstration',
       },
       {
@@ -41,15 +41,15 @@ const activities = [
       "Our team hosts fun pickleball tournaments to raise funds for new parts and travel expenses. It's a great way to bond as a team and engage with the community.",
     gallery: [
       {
-        src: '/pickleball_1.png',
+        src: '/pickleball_1.jpeg',
         hint: 'pickleball tournament sport',
       },
       {
-        src: '/pickleball_2.png',
+        src: '/pickleball_2.jpeg',
         hint: 'team playing pickleball',
       },
       {
-        src: '/pickleball_3.png',
+        src: '/pickleball_3.jpeg',
         hint: 'community event fundraiser',
       },
        {
