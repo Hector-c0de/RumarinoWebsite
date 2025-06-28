@@ -53,7 +53,7 @@ export default function AUVsPage() {
                     <div className="grid md:grid-cols-2 gap-8 items-center">
                         <div className="aspect-video relative order-last md:order-first">
                             <Image
-                                src="/hydrus_photo_1.jpeg"
+                                src="/electrical.jpg"
                                 alt="Hydrus Electrical System"
                                 fill
                                 className="object-cover rounded-lg"
