@@ -35,10 +35,12 @@ export const teams: Team[] = [
     teamImage: '/computer_system_team.jpeg',
     teamImageHint: 'students coding computer lab',
     members: [
-      { name: 'David Lee', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd Year', major: 'Computer Science' },
-      { name: 'Emily White', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '2nd Year', major: 'Software Engineering' },
-      { name: 'Frank Green', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '4th Year', major: 'Computer Engineering' },
-      { name: 'Grace Hall', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd Year', major: 'Computer Science' },
+      { name: 'Cesar', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd Year', major: 'Computer Science' },
+      { name: 'Edyan', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '2nd Year', major: 'Software Engineering' },
+      { name: 'Hector', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '4th Year', major: 'Computer Engineering' },
+      { name: 'Gabriela', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd Year', major: 'Computer Science' },
+      { name: 'Javier', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd Year', major: 'Computer Science' },
+      { name: 'Elian', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd Year', major: 'Computer Science' },
     ],
   },
   {
@@ -48,8 +50,8 @@ export const teams: Team[] = [
     teamImage: '/mechanical_team.jpeg',
     teamImageHint: 'engineering students workshop',
     members: [
-      { name: 'Henry King', photoUrl: 'https://placehold.co/400x400/F97316/FFFFFF', hint: 'engineer headshot', year: '4th Year', major: 'Mechanical Engineering' },
-      { name: 'Ivy Scott', photoUrl: 'https://placehold.co/400x400/F97316/FFFFFF', hint: 'engineer headshot', year: '3rd Year', major: 'Mechanical Engineering' },
+      { name: 'David', photoUrl: 'https://placehold.co/400x400/F97316/FFFFFF', hint: 'engineer headshot', year: '4th Year', major: 'Mechanical Engineering' },
+      { name: 'Veronica', photoUrl: '/veronica.jpg', hint: 'engineer headshot', year: '3rd Year', major: 'Mechanical Engineering' },
       { name: 'Jack Wright', photoUrl: 'https://placehold.co/400x400/F97316/FFFFFF', hint: 'engineer headshot', year: '2nd Year', major: 'Aerospace Engineering' },
     ],
   },
