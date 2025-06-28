@@ -1,5 +1,4 @@
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Download, Rocket } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -30,60 +29,52 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <Card className="overflow-hidden shadow-2xl transition-shadow hover:shadow-primary/20 md:grid md:grid-cols-2 md:gap-8 items-center">
-            <div className="md:order-2">
-              <Image
-                src="/IMG_3170.HEIC.png"
-                alt="Rumarino team with Hydrus AUV"
-                width={1200}
-                height={800}
-                className="object-cover w-full h-full"
-                data-ai-hint="robotics team underwater vehicle"
-              />
-            </div>
-            <div className="p-8 md:p-12 md:order-1">
-              <CardHeader>
-                <CardTitle className="font-headline text-3xl md:text-4xl text-accent">
-                  Meet the Team & Our AUV
-                </CardTitle>
-                <CardDescription className="text-lg mt-2">
-                  We are a passionate, interdisciplinary team from the university, dedicated to pushing the boundaries of marine technology.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="mb-6">
-                  Our flagship autonomous underwater vehicle, Hydrus, is a culmination of countless hours of design, engineering, and testing. It represents our commitment to innovation and our readiness to compete at RoboSub 2025.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button asChild size="lg" className="font-bold">
-                    <Link href="/team">
-                      <Rocket className="mr-2 h-5 w-5" />
-                      Our Mission
-                    </Link>
-                  </Button>
-                  <Button asChild size="lg" variant="outline" className="font-bold">
-                    <Link href="/auvs">
-                      Explore Hydrus
-                    </Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </div>
-          </Card>
+      <section id="about" className="w-full bg-background">
+        <div className="w-full">
+          <Image
+            src="https://placehold.co/1920x800.png"
+            alt="Rumarino team working on the Hydrus AUV"
+            width={1920}
+            height={800}
+            className="object-cover w-full h-auto max-h-[60vh]"
+            data-ai-hint="robotics team underwater vehicle"
+          />
+        </div>
+        <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-24">
+          <h2 className="font-headline text-3xl font-bold text-accent md:text-5xl">
+            Meet the Team &amp; Our AUV
+          </h2>
+          <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
+            We are a passionate, interdisciplinary team from the university, dedicated to pushing the boundaries of marine technology.
+          </p>
+          <p className="mt-6 max-w-3xl">
+            Our flagship autonomous underwater vehicle, Hydrus, is a culmination of countless hours of design, engineering, and testing. It represents our commitment to innovation and our readiness to compete at RoboSub 2025.
+          </p>
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <Button asChild size="lg" className="font-bold">
+              <Link href="/team">
+                <Rocket className="mr-2 h-5 w-5" />
+                Our Mission
+              </Link>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="font-bold">
+              <Link href="/auvs">
+                Explore Hydrus
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 
-      <section id="tdr" className="py-16 md:py-24 bg-card">
+      <section id="tdr" className="bg-card py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="font-headline text-3xl md:text-4xl font-bold mb-4">
+          <h2 className="font-headline text-3xl font-bold md:text-4xl mb-4">
             Dive Deeper into Our Technology
           </h2>
-          <p className="max-w-3xl mx-auto text-muted-foreground mb-8 text-lg">
+          <p className="mx-auto mb-8 max-w-3xl text-lg text-muted-foreground">
             Explore the intricate details of our AUV's design, systems, and strategy in our comprehensive Technical Design Report for the RoboSub 2025 competition.
           </p>
-          <Button asChild size="lg" className="font-bold text-lg py-8 px-10 shadow-lg hover:shadow-primary/40 transition-shadow">
+          <Button asChild size="lg" className="px-10 py-8 text-lg font-bold shadow-lg transition-shadow hover:shadow-primary/40">
             <a href="/TDR.pdf" download="Rumarino-TDR-2025.pdf">
               <Download className="mr-3 h-6 w-6" />
               Download Technical Design Report

@@ -19,9 +19,9 @@ export const teams: Team[] = [
   {
     name: 'Management',
     slug: 'management',
-    description: 'The Management team leads the project, ensuring we meet our goals on time and within budget. They handle logistics, outreach, and strategic planning to steer the Rumarino team to success.',
-    teamImage: 'https://placehold.co/1200x600/3B82F6/FFFFFF',
-    teamImageHint: 'team meeting presentation',
+    description: 'The Management Team oversees the strategic direction and operations of Rumarino.',
+    teamImage: '/managment_team.png',
+    teamImageHint: 'Photo of the management team',
     members: [
       { name: 'Alex Johnson', photoUrl: 'https://placehold.co/400x400/3B82F6/FFFFFF', hint: 'professional headshot', year: '4th Year', major: 'Business Administration' },
       { name: 'Brenda Smith', photoUrl: 'https://placehold.co/400x400/3B82F6/FFFFFF', hint: 'professional headshot', year: '3rd Year', major: 'Marketing' },
@@ -32,7 +32,7 @@ export const teams: Team[] = [
     name: 'Computer Systems',
     slug: 'computer-systems',
     description: 'The Computer Systems team is the brain of our AUV. They develop the software for navigation, sensor integration, and autonomous decision-making, bringing Hydrus to life through code.',
-    teamImage: 'https://placehold.co/1200x600/8B5CF6/FFFFFF',
+    teamImage: '/computer_system_team.png',
     teamImageHint: 'students coding computer lab',
     members: [
       { name: 'David Lee', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd Year', major: 'Computer Science' },
@@ -45,7 +45,7 @@ export const teams: Team[] = [
     name: 'Mechanical',
     slug: 'mechanical',
     description: 'The Mechanical team is responsible for the physical design and fabrication of our AUV. From the chassis to the manipulators, they ensure Hydrus is robust, hydrodynamic, and ready for the depths.',
-    teamImage: 'https://placehold.co/1200x600/F97316/FFFFFF',
+    teamImage: '/mechanical_team.png',
     teamImageHint: 'engineering students workshop',
     members: [
       { name: 'Henry King', photoUrl: 'https://placehold.co/400x400/F97316/FFFFFF', hint: 'engineer headshot', year: '4th Year', major: 'Mechanical Engineering' },
@@ -57,7 +57,7 @@ export const teams: Team[] = [
     name: 'Electrical',
     slug: 'electrical',
     description: 'The Electrical team powers our AUV. They design and manage the custom PCBs, power distribution systems, and sensor wiring, ensuring every component communicates and functions flawlessly underwater.',
-    teamImage: 'https://placehold.co/1200x600/EAB308/FFFFFF',
+    teamImage: '/electrical_team.png',
     teamImageHint: 'electronics lab circuit board',
     members: [
       { name: 'Karen Adams', photoUrl: 'https://placehold.co/400x400/EAB308/FFFFFF', hint: 'technician headshot', year: '3rd Year', major: 'Electrical Engineering' },
