@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
-import { Download, Rocket } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Download } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -29,40 +30,53 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="w-full bg-background">
-        <div className="w-full">
-          <Image
-            src="https://placehold.co/1920x800.png"
-            alt="Rumarino team working on the Hydrus AUV"
-            width={1920}
-            height={800}
-            className="object-cover w-full h-auto max-h-[60vh]"
-            data-ai-hint="robotics team underwater vehicle"
-          />
-        </div>
-        <div className="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-24">
-          <h2 className="font-headline text-3xl font-bold text-accent md:text-5xl">
-            Meet the Team &amp; Our AUV
-          </h2>
-          <p className="mt-4 max-w-3xl text-lg text-muted-foreground">
-            We are a passionate, interdisciplinary team from the university, dedicated to pushing the boundaries of marine technology.
-          </p>
-          <p className="mt-6 max-w-3xl">
-            Our flagship autonomous underwater vehicle, Hydrus, is a culmination of countless hours of design, engineering, and testing. It represents our commitment to innovation and our readiness to compete at RoboSub 2025.
-          </p>
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Button asChild size="lg" className="font-bold">
-              <Link href="/team">
-                <Rocket className="mr-2 h-5 w-5" />
-                Our Mission
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="font-bold">
-              <Link href="/auvs">
-                Explore Hydrus
-              </Link>
-            </Button>
-          </div>
+      <section id="about" className="w-full bg-background py-16 md:py-24">
+        <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+                <h2 className="font-headline text-3xl font-bold text-accent md:text-5xl">
+                    Explore Our Team &amp; Technology
+                </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <Link href="/team" className="group block">
+                    <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary/50 hover:-translate-y-1">
+                        <div className="relative aspect-video">
+                            <Image
+                                src="https://placehold.co/600x400/10B981/FFFFFF.png"
+                                alt="Rumarino Team"
+                                fill
+                                className="object-cover transition-transform group-hover:scale-105"
+                                data-ai-hint="robotics team group photo"
+                            />
+                        </div>
+                        <CardHeader>
+                            <CardTitle>Meet the Team</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-muted-foreground">Discover the talented students and mentors driving our mission forward.</p>
+                        </CardContent>
+                    </Card>
+                </Link>
+                <Link href="/auvs" className="group block">
+                    <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary/50 hover:-translate-y-1">
+                        <div className="relative aspect-video">
+                            <Image
+                                src="https://placehold.co/600x400/06B6D4/FFFFFF.png"
+                                alt="Hydrus AUV"
+                                fill
+                                className="object-cover transition-transform group-hover:scale-105"
+                                data-ai-hint="underwater robot vehicle"
+                            />
+                        </div>
+                        <CardHeader>
+                            <CardTitle>Explore Hydrus</CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-muted-foreground">Dive into the technical specifications of our advanced AUV.</p>
+                        </CardContent>
+                    </Card>
+                </Link>
+            </div>
         </div>
       </section>
 
