@@ -72,7 +72,7 @@ const activities = [
         hint: 'pizza food sales',
       },
       {
-        src: 'https://placehold.co/600x400.png',
+        src: '/billar_1.jpg',
         hint: 'students buying pizza',
       },
       {

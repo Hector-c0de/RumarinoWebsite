@@ -17,7 +17,7 @@ export default function AUVsPage() {
         <section className="mb-16">
           <div className="aspect-video relative">
               <Image
-                  src="https://placehold.co/1200x800.png"
+                  src="/hydrus.jpeg"
                   alt="Hydrus AUV"
                   fill
                   className="object-cover"
