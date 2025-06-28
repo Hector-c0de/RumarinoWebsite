@@ -55,6 +55,7 @@ export const teams: Team[] = [
       { name: 'David', photoUrl: '/david.jpg', hint: 'engineer headshot', year: '4th Year', major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:david@example.com' },
       { name: 'Veronica', photoUrl: '/veronica.jpg', hint: 'engineer headshot', year: '3rd Year', major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:veronica@example.com' },
       { name: 'Anibal', photoUrl: 'https://placehold.co/400x400/F97316/FFFFFF', hint: 'engineer headshot', year: '2nd Year', major: 'Aerospace Engineering', linkedinUrl: '#', email: 'mailto:anibal@example.com' },
+      
     ],
   },
   {
