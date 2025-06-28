@@ -53,7 +53,7 @@ const activities = [
         hint: 'community event fundraiser',
       },
        {
-        src: '/pickleball_4.png',
+        src: '/pickleball_4.jpeg',
         hint: 'pickleball action shot',
       },
       {
