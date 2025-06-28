@@ -34,7 +34,7 @@ const activities = [
         hint: 'team presenting school',
         type: 'image',
       },
-       {
+      {
         src: 'https://placehold.co/600x400.png',
         hint: 'excited children robots',
         type: 'image',
@@ -61,9 +61,14 @@ const activities = [
         hint: 'community event fundraiser',
         type: 'image',
       },
-       {
+      {
         src: '/pickleball_4.jpeg',
         hint: 'pickleball action shot',
+        type: 'image',
+      },
+      {
+        src: '/pickleball_5.jpg',
+        hint: 'team bonding pickleball',
         type: 'image',
       },
       {
@@ -72,18 +77,18 @@ const activities = [
         type: 'image',
       },
       {
+        src: '/pizza_sale_2.jpg',
+        hint: 'pizza sale event',
+        type: 'image',
+      },
+      {
+        src: '/pizza_sale_3.jpg',
+        hint: 'students enjoying pizza',
+        type: 'image',
+      },
+      {
         src: '/billar_1.jpg',
         hint: 'students buying pizza',
-        type: 'image',
-      },
-      {
-        src: 'https://placehold.co/600x400.png',
-        hint: 'team selling food',
-        type: 'image',
-      },
-      {
-        src: 'https://placehold.co/600x400.png',
-        hint: 'close up pizza',
         type: 'image',
       },
     ] as GalleryItem[],
@@ -98,7 +103,7 @@ export default function ActivitiesPage() {
     <>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-    
+
           <h1 className="font-headline text-4xl md:text-5xl font-bold">
             Team Activities
           </h1>
@@ -133,13 +138,13 @@ export default function ActivitiesPage() {
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
                         data-ai-hint={item.hint}
                       />
-                       <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         {item.type === 'video' ? (
                           <PlayCircle className="h-12 w-12 text-white" />
                         ) : (
                           <Search className="h-10 w-10 text-white" />
                         )}
-                       </div>
+                      </div>
                     </div>
                   ))}
                 </div>
