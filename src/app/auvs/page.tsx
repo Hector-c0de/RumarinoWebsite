@@ -15,7 +15,7 @@ export default function AUVsPage() {
         </header>
         
         <section className="mb-16">
-          <div className="rounded-lg overflow-hidden shadow-xl aspect-video relative max-w-5xl mx-auto">
+          <div className="aspect-video relative">
               <Image
                   src="https://placehold.co/1200x800.png"
                   alt="Hydrus AUV"
@@ -29,22 +29,20 @@ export default function AUVsPage() {
         <Separator className="my-8" />
         
         <section id="software" className="py-8">
-            <div className="max-w-5xl mx-auto">
-                <Link href="#" target="_blank" rel="noopener noreferrer" className="group block">
-                    <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all">
-                        <Image
-                            src="https://placehold.co/1200x675.png"
-                            alt="Rumarino GitHub Repository"
-                            fill
-                            className="object-cover transition-transform group-hover:scale-105"
-                            data-ai-hint="github repository screenshot"
-                        />
-                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                            <span className="text-white font-bold text-xl opacity-0 group-hover:opacity-100 transition-opacity">Explore on GitHub</span>
-                        </div>
+            <Link href="https://github.com/Rumarino-Team/hydrus-software-stack" target="_blank" rel="noopener noreferrer" className="group block">
+                <div className="relative aspect-video overflow-hidden">
+                    <Image
+                        src="/github_screenshot.png"
+                        alt="Rumarino GitHub Repository"
+                        fill
+                        className="object-cover transition-transform group-hover:scale-105"
+                        data-ai-hint="github repository screenshot"
+                    />
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                        <span className="text-white font-bold text-xl opacity-0 group-hover:opacity-100 transition-opacity">Explore on GitHub</span>
                     </div>
-                </Link>
-            </div>
+                </div>
+            </Link>
             
             <div className="max-w-4xl mx-auto mt-8">
                 <h2 className="font-headline text-3xl font-bold mb-4">Software Architecture</h2>
