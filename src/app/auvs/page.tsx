@@ -28,6 +28,48 @@ export default function AUVsPage() {
 
                 <Separator className="my-8" />
 
+                <section id="mechanical" className="py-8">
+                    <div className="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <h2 className="font-headline text-3xl font-bold mb-4">Mechanical Design</h2>
+                            <p className="text-muted-foreground">
+                                Hydrus&apos;s main hull is composed of a central aluminum cabin, which serves as the main hub for connections and wiring, and two acrylic cabins on either side for storing electrical components. This dual-hull design is complemented by a mechanical claw for object manipulation and a forward-facing ZED 2i camera housed in its own acrylic cabin, capable of 180° movement to enhance visibility. A torpedo launching system is also integrated into the design.
+                            </p>
+                        </div>
+                        <div className="aspect-video relative">
+                            <Image
+                                src="/hydrus_model1.jpeg"
+                                alt="Hydrus Mechanical Model"
+                                fill
+                                className="object-cover rounded-lg"
+                            />
+                        </div>
+                    </div>
+                </section>
+
+                <Separator className="my-8" />
+
+                <section id="electrical" className="py-8">
+                    <div className="grid md:grid-cols-2 gap-8 items-center">
+                        <div className="aspect-video relative order-last md:order-first">
+                            <Image
+                                src="/electrical.jpg"
+                                alt="Hydrus Electrical System"
+                                fill
+                                className="object-cover rounded-lg"
+                            />
+                        </div>
+                        <div className="md:text-right">
+                            <h2 className="font-headline text-3xl font-bold mb-4">Electrical Systems</h2>
+                            <p className="text-muted-foreground">
+                                The power system on Hydrus operates on two voltage phases, 22V and 12V, supplied by a 22.8V, 23,000mAh battery. A central, custom-designed PCB distributes power, with a ZK-12KX voltage regulator stepping down voltage for the 12V phase. To protect critical components like thrusters and micro-computers, the system incorporates a network of fuses and relays. The PCB was specifically redesigned to accommodate the integration of the gripper and torpedo systems.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <Separator className="my-8" />
+
                 <section id="software" className="py-8">
                     <Link href="https://github.com/Rumarino-Team/hydrus-software-stack" target="_blank" rel="noopener noreferrer" className="group block">
                         <div className="relative aspect-video overflow-hidden">
@@ -48,21 +90,6 @@ export default function AUVsPage() {
                         <h2 className="font-headline text-3xl font-bold mb-4">Software Architecture</h2>
                         <p className="text-muted-foreground">
                             Hydrus is powered by a sophisticated software stack running on ROS (Robot Operating System). Our custom computer vision, state estimation, and path planning algorithms enable fully autonomous operation in complex underwater environments.
-                        </p>
-                    </div>
-                </section>
-
-                <Separator className="my-8" />
-
-                <section id="design" className="py-8">
-                    <div className="flex flex-col items-center text-center">
-                        <div className="p-4 bg-accent/10 rounded-full mb-4 flex gap-4">
-                            <Cog className="h-10 w-10 text-accent" />
-                            <CircuitBoard className="h-10 w-10 text-accent" />
-                        </div>
-                        <h2 className="font-headline text-3xl font-bold mb-4">Integrated Design</h2>
-                        <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                            Featuring a modular, pressure-rated chassis and a distributed power system with custom PCBs, Hydrus is built for reliability and ease of maintenance. Its hydrodynamic profile and powerful thrusters provide a unique combination of stability and agility.
                         </p>
                     </div>
                 </section>

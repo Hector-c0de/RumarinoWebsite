@@ -32,7 +32,7 @@ export default function Home() {
             />
           </div>
           <p className="font-body text-xl md:text-2xl max-w-2xl mx-auto text-primary-foreground/90">
-            Diving into the future of autonomous underwater robotics.
+            We are the first group of college students in the Caribbean to create an autonomous underwater vehicle (AUV) that is competing in the RoboSub competition.
           </p>
         </div>
       </section>
@@ -86,7 +86,11 @@ export default function Home() {
               <Card className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary/50 hover:-translate-y-1">
                 <div className="relative aspect-video">
                   <Image
+<<<<<<< HEAD
                     src="/team_photo.jpeg.jpg"
+=======
+                    src="/team.jpg"
+>>>>>>> 78361476097cabf09302a3ec90eb4fd428690f3d
                     alt="Rumarino Team at Outreach Event"
                     fill
                     className="object-cover transition-transform group-hover:scale-105"
