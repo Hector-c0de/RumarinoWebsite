@@ -1,11 +1,50 @@
+'use client';
+
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { FileText, Trophy, Video, Camera } from "lucide-react";
+import { FileText, Trophy, Video, Camera, Search, PlayCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Dialog, DialogContent } from '@/components/ui/dialog';
+
+type GalleryItem = {
+  src: string;
+  hint: string;
+  type: 'image' | 'video';
+  thumbnail?: string;
+};
+
+const gallery2024: GalleryItem[] = [
+  {
+    src: '/robosub_2024_1.mp4',
+    hint: 'RoboSub 2024 recap video',
+    type: 'video',
+    thumbnail: 'https://placehold.co/1200x675.png',
+  },
+  {
+    src: 'https://placehold.co/400x400.png',
+    hint: 'underwater robot action',
+    type: 'image',
+  },
+  {
+    src: 'https://placehold.co/400x400.png',
+    hint: 'team working robot',
+    type: 'image',
+  },
+  {
+    src: 'https://placehold.co/400x400.png',
+    hint: 'team celebrating success',
+    type: 'image',
+  }
+];
+
 
 export default function CompetitionPage() {
+  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
+
   return (
+    <>
     <div className="bg-background">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -55,22 +94,6 @@ export default function CompetitionPage() {
             <p className="text-muted-foreground pt-2 mb-8">A look back at our performance last year.</p>
 
             <div className="space-y-8">
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
-                    <Image
-                        src="https://placehold.co/1200x675.png"
-                        alt="Rumarino team at RoboSub 2024"
-                        fill
-                        className="object-cover"
-                        data-ai-hint="robotics competition team"
-                    />
-                </div>
-                {/* Video Player for RoboSub 2024 */}
-                <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
-                    <video controls className="w-full h-full object-cover">
-                        <source src="/robosub_2024_1.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                      <Button asChild>
                         <Link href="#">
@@ -88,16 +111,29 @@ export default function CompetitionPage() {
 
                 <div>
                     <h3 className="font-bold text-xl mb-4 flex items-center gap-2"><Camera className="h-5 w-5 text-accent"/>Competition Gallery</h3>
-                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <div className="relative aspect-square rounded-lg overflow-hidden">
-                             <Image src="https://placehold.co/400x400.png" alt="Competition photo 1" fill className="object-cover" data-ai-hint="underwater robot action"/>
-                        </div>
-                         <div className="relative aspect-square rounded-lg overflow-hidden">
-                             <Image src="https://placehold.co/400x400.png" alt="Competition photo 2" fill className="object-cover" data-ai-hint="team working robot"/>
-                        </div>
-                         <div className="relative aspect-square rounded-lg overflow-hidden">
-                             <Image src="https://placehold.co/400x400.png" alt="Competition photo 3" fill className="object-cover" data-ai-hint="team celebrating success"/>
-                        </div>
+                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        {gallery2024.map((item, idx) => (
+                          <div
+                            key={idx}
+                            className="relative aspect-video rounded-lg overflow-hidden group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow"
+                            onClick={() => setSelectedItem(item)}
+                          >
+                            <Image
+                              src={item.type === 'video' ? item.thumbnail! : item.src}
+                              alt={`RoboSub 2024 gallery item ${idx + 1}`}
+                              fill
+                              className="object-cover transition-transform duration-300 group-hover:scale-105"
+                              data-ai-hint={item.hint}
+                            />
+                            <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                              {item.type === 'video' ? (
+                                <PlayCircle className="h-12 w-12 text-white" />
+                              ) : (
+                                <Search className="h-10 w-10 text-white" />
+                              )}
+                            </div>
+                          </div>
+                        ))}
                     </div>
                 </div>
             </div>
@@ -112,5 +148,38 @@ export default function CompetitionPage() {
 
       </div>
     </div>
+      <Dialog
+        open={!!selectedItem}
+        onOpenChange={(isOpen) => {
+          if (!isOpen) {
+            setSelectedItem(null);
+          }
+        }}
+      >
+        <DialogContent className="max-w-5xl w-full p-0 border-0 bg-transparent shadow-none">
+          {selectedItem && (
+            <>
+              {selectedItem.type === 'image' ? (
+                <Image
+                  src={selectedItem.src.replace(/(\d+x\d+)/, '1200x800')}
+                  alt="Expanded competition media"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto object-contain rounded-lg"
+                  data-ai-hint={selectedItem.hint}
+                />
+              ) : (
+                <video
+                  src={selectedItem.src}
+                  controls
+                  autoPlay
+                  className="w-full h-auto max-h-[90vh] object-contain rounded-lg"
+                />
+              )}
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
+    </>
   );
 }

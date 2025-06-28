@@ -2,13 +2,15 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Zap, Search } from 'lucide-react';
+import { Search, PlayCircle } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Separator } from '@/components/ui/separator';
 
-type GalleryImage = {
+type GalleryItem = {
   src: string;
   hint: string;
+  type: 'image' | 'video';
+  thumbnail?: string; // Optional thumbnail for videos
 };
 
 const activities = [
@@ -20,20 +22,24 @@ const activities = [
       {
         src: '/outreach_1.jpg',
         hint: 'students robotics workshop',
+        type: 'image',
       },
       {
         src: '/outreach_2.jpeg',
         hint: 'robot demonstration',
+        type: 'image',
       },
       {
         src: 'https://placehold.co/600x400.png',
         hint: 'team presenting school',
+        type: 'image',
       },
        {
         src: 'https://placehold.co/600x400.png',
         hint: 'excited children robots',
+        type: 'image',
       },
-    ],
+    ] as GalleryItem[],
   },
   {
     title: 'Fundraising Events',
@@ -43,42 +49,50 @@ const activities = [
       {
         src: '/pickleball_1.jpeg',
         hint: 'pickleball tournament sport',
+        type: 'image',
       },
       {
         src: '/pickleball_2.jpeg',
         hint: 'team playing pickleball',
+        type: 'image',
       },
       {
         src: '/pickleball_3.jpeg',
         hint: 'community event fundraiser',
+        type: 'image',
       },
        {
         src: '/pickleball_4.png',
         hint: 'pickleball action shot',
+        type: 'image',
       },
       {
         src: '/pizza_sale_1.jpg',
         hint: 'pizza food sales',
+        type: 'image',
       },
       {
         src: '/billar_1.jpg',
         hint: 'students buying pizza',
+        type: 'image',
       },
       {
         src: 'https://placehold.co/600x400.png',
         hint: 'team selling food',
+        type: 'image',
       },
       {
         src: 'https://placehold.co/600x400.png',
         hint: 'close up pizza',
+        type: 'image',
       },
-    ],
+    ] as GalleryItem[],
   },
 ];
 
 
 export default function ActivitiesPage() {
-  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
 
   return (
     <>
@@ -106,21 +120,25 @@ export default function ActivitiesPage() {
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  {activity.gallery.map((image, idx) => (
+                  {activity.gallery.map((item, idx) => (
                     <div
                       key={idx}
-                      className="relative aspect-[4/3] rounded-lg overflow-hidden group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow"
-                      onClick={() => setSelectedImage(image)}
+                      className="relative aspect-video rounded-lg overflow-hidden group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow"
+                      onClick={() => setSelectedItem(item)}
                     >
                       <Image
-                        src={image.src}
-                        alt={`${activity.title} gallery photo ${idx + 1}`}
+                        src={item.type === 'video' ? item.thumbnail || 'https://placehold.co/600x400.png' : item.src}
+                        alt={`${activity.title} gallery item ${idx + 1}`}
                         fill
                         className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        data-ai-hint={image.hint}
+                        data-ai-hint={item.hint}
                       />
                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <Search className="h-10 w-10 text-white" />
+                        {item.type === 'video' ? (
+                          <PlayCircle className="h-12 w-12 text-white" />
+                        ) : (
+                          <Search className="h-10 w-10 text-white" />
+                        )}
                        </div>
                     </div>
                   ))}
@@ -132,23 +150,34 @@ export default function ActivitiesPage() {
         </div>
       </div>
       <Dialog
-        open={!!selectedImage}
+        open={!!selectedItem}
         onOpenChange={(isOpen) => {
           if (!isOpen) {
-            setSelectedImage(null);
+            setSelectedItem(null);
           }
         }}
       >
-        <DialogContent className="max-w-5xl p-2 border-0 bg-transparent shadow-none">
-          {selectedImage && (
-            <Image
-              src={selectedImage.src.replace(/(\d+x\d+)/, '1200x800')}
-              alt="Expanded activity photo"
-              width={1200}
-              height={800}
-              className="w-full h-auto object-contain rounded-lg"
-              data-ai-hint={selectedImage.hint}
-            />
+        <DialogContent className="max-w-5xl w-full p-0 border-0 bg-transparent shadow-none">
+          {selectedItem && (
+            <>
+              {selectedItem.type === 'image' ? (
+                <Image
+                  src={selectedItem.src.replace(/(\d+x\d+)/, '1200x800')}
+                  alt="Expanded activity photo"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto object-contain rounded-lg"
+                  data-ai-hint={selectedItem.hint}
+                />
+              ) : (
+                <video
+                  src={selectedItem.src}
+                  controls
+                  autoPlay
+                  className="w-full h-auto max-h-[90vh] object-contain rounded-lg"
+                />
+              )}
+            </>
           )}
         </DialogContent>
       </Dialog>
