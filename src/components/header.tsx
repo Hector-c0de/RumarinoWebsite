@@ -14,6 +14,7 @@ const navLinks = [
   { href: '/team', label: 'Team' },
   { href: '/competition', label: 'Competition' },
   { href: '/auvs', label: 'AUVs' },
+  { href: '/activities', label: 'Activities' },
 ];
 
 const Header = () => {
