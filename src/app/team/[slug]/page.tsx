@@ -61,9 +61,13 @@ export default function TeamDetailPage({ params }: TeamDetailPageProps) {
                     <Image
                         src={member.photoUrl}
                         alt={`Photo of ${member.name}`}
-                        width={400}
+ width={400}
+
                         height={400}
                         className="w-full h-full object-cover"
+ style={{
+ transform: `rotate(${member.rotation || 0}deg)`,
+                    }}
                         data-ai-hint={member.hint}
                     />
                 </div>
