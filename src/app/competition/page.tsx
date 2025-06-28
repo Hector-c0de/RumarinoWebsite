@@ -64,6 +64,13 @@ export default function CompetitionPage() {
                         data-ai-hint="robotics competition team"
                     />
                 </div>
+                {/* Video Player for RoboSub 2024 */}
+                <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+                    <video controls className="w-full h-full object-cover">
+                        <source src="/robosub_2024_1.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                      <Button asChild>
                         <Link href="#">
