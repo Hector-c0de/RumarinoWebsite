@@ -68,7 +68,7 @@ const activities = [
       'Fueling our late-night build sessions and our budget! Every Friday, we sell delicious pizza on campus to support our project.',
     gallery: [
       {
-        src: 'https://placehold.co/600x400.png',
+        src: '/pizza_sale_1.jpg',
         hint: 'pizza food sales',
       },
       {
@@ -95,9 +95,7 @@ export default function ActivitiesPage() {
     <>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
-          <div className="inline-block bg-accent/10 text-accent p-4 rounded-full mb-4">
-            <Zap className="h-10 w-10" />
-          </div>
+    
           <h1 className="font-headline text-4xl md:text-5xl font-bold">
             Team Activities
           </h1>
