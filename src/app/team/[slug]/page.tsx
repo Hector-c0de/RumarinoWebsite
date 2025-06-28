@@ -20,7 +20,7 @@ export default function TeamDetailPage({ params }: TeamDetailPageProps) {
     notFound();
   }
 
-  const { name, description, teamImage, teamImageHint, members, icon: Icon } = team;
+  const { name, description, teamImage, teamImageHint, members } = team;
 
   return (
     <div className="bg-card">
@@ -35,9 +35,6 @@ export default function TeamDetailPage({ params }: TeamDetailPageProps) {
         </div>
 
         <header className="mb-12 text-center">
-            <div className="inline-block bg-accent/10 text-accent p-4 rounded-full mb-4">
-                <Icon className="h-12 w-12" />
-            </div>
           <h1 className="font-headline text-4xl md:text-5xl font-bold text-primary">{name} Team</h1>
           <p className="mt-4 text-lg max-w-3xl mx-auto text-muted-foreground">{description}</p>
         </header>

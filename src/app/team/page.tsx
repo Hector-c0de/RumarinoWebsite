@@ -23,14 +23,9 @@ export default function TeamPage() {
             <Link key={team.slug} href={`/team/${team.slug}`} className="group block">
               <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary/50 hover:-translate-y-1">
                 <div className="grid grid-cols-1 md:grid-cols-2 h-full min-h-[400px] md:min-h-0">
-                  <div className="p-6 flex flex-col">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="bg-accent/10 text-accent p-3 rounded-full">
-                        <team.icon className="h-8 w-8" />
-                      </div>
-                      <h2 className="font-headline text-2xl">{team.name}</h2>
-                    </div>
-                    <p className="text-muted-foreground text-sm mb-4 flex-grow">{team.description}</p>
+                  <div className="p-8 flex flex-col justify-center">
+                    <h2 className="font-headline text-3xl font-bold mb-4">{team.name}</h2>
+                    <p className="text-muted-foreground mb-4 flex-grow">{team.description}</p>
                     <div className="mt-auto font-semibold text-accent flex items-center gap-2 group-hover:gap-3 transition-all">
                       <span>View Members</span>
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -40,9 +35,8 @@ export default function TeamPage() {
                     <Image
                       src={team.teamImage}
                       alt={`${team.name} team photo`}
-                      layout="fill"
-                      objectFit="cover"
-                      className="transition-transform group-hover:scale-105"
+                      fill
+                      className="object-cover transition-transform group-hover:scale-105"
                       data-ai-hint={team.teamImageHint}
                     />
                   </div>
