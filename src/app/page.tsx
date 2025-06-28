@@ -42,7 +42,7 @@ export default function Home() {
                     <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary/50 hover:-translate-y-1">
                         <div className="relative aspect-video">
                             <Image
-                                src="https://placehold.co/600x400/10B981/FFFFFF.png"
+                                src="/outreach_1.jpg"
                                 alt="Rumarino Team"
                                 fill
                                 className="object-cover transition-transform group-hover:scale-105"
@@ -61,7 +61,7 @@ export default function Home() {
                     <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary/50 hover:-translate-y-1">
                         <div className="relative aspect-video">
                             <Image
-                                src="https://placehold.co/600x400/06B6D4/FFFFFF.png"
+                                src="/hydrus_photo_1.jpeg"
                                 alt="Hydrus AUV"
                                 fill
                                 className="object-cover transition-transform group-hover:scale-105"

@@ -1,37 +1,61 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Rocket } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Github, Cog, CircuitBoard } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function AUVsPage() {
   return (
-    <div className="container mx-auto px-4 py-16">
-      <Card className="max-w-3xl mx-auto">
-        <CardHeader className="text-center">
-          <div className="mx-auto bg-accent/10 text-accent p-3 rounded-full w-fit mb-4">
-             <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="40"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M12 22a7 7 0 0 0 7-7h-4a3 3 0 0 1-3-3V8h-4v4a3 3 0 0 1-3 3H2a7 7 0 0 0 7 7z" />
-                <path d="M5 8a7 7 0 0 1 14 0" />
-                <path d="M9 4L11 2" />
-                <path d="M15 4L13 2" />
-              </svg>
+    <div className="bg-background">
+      <div className="container mx-auto px-4 py-16">
+        <header className="text-center mb-12">
+            <h1 className="font-headline text-5xl md:text-6xl font-bold">Hydrus</h1>
+            <p className="mt-4 text-lg max-w-2xl mx-auto text-muted-foreground">
+              Our latest generation Autonomous Underwater Vehicle, engineered for excellence in the RoboSub competition.
+            </p>
+        </header>
+        
+        <section className="mb-16">
+          <div className="rounded-lg overflow-hidden shadow-xl aspect-video relative max-w-5xl mx-auto">
+              <Image
+                  src="https://placehold.co/1200x800.png"
+                  alt="Hydrus AUV"
+                  fill
+                  className="object-cover"
+                  data-ai-hint="underwater robot vehicle"
+              />
           </div>
-          <CardTitle className="font-headline text-4xl">Our AUVs</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-center text-lg text-muted-foreground">
-            Detailed specifications and images of Hydrus and our other vehicles are coming soon.
-          </p>
-        </CardContent>
-      </Card>
+        </section>
+
+        <section className="grid md:grid-cols-2 gap-16 items-start">
+          <div className="flex flex-col items-center text-center">
+            <div className="p-4 bg-primary/10 rounded-full mb-4">
+              <Github className="h-10 w-10 text-primary"/>
+            </div>
+            <h2 className="font-headline text-3xl font-bold mb-4">Software Architecture</h2>
+            <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+              Hydrus is powered by a sophisticated software stack running on ROS (Robot Operating System). Our custom computer vision, state estimation, and path planning algorithms enable fully autonomous operation in complex underwater environments.
+            </p>
+            <Button asChild size="lg">
+              <Link href="#" target="_blank" rel="noopener noreferrer">
+                <Github className="mr-2 h-5 w-5" />
+                Explore on GitHub
+              </Link>
+            </Button>
+          </div>
+
+          <div className="flex flex-col items-center text-center">
+             <div className="p-4 bg-accent/10 rounded-full mb-4 flex gap-4">
+              <Cog className="h-10 w-10 text-accent"/>
+              <CircuitBoard className="h-10 w-10 text-accent"/>
+            </div>
+            <h2 className="font-headline text-3xl font-bold mb-4">Integrated Design</h2>
+            <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+              Featuring a modular, pressure-rated chassis and a distributed power system with custom PCBs, Hydrus is built for reliability and ease of maintenance. Its hydrodynamic profile and powerful thrusters provide exceptional maneuverability.
+            </p>
+          </div>
+        </section>
+
+      </div>
     </div>
   );
 }
