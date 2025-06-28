@@ -1,4 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Cog, CircuitBoard } from "lucide-react";
 import Image from "next/image";
@@ -30,36 +29,28 @@ export default function AUVsPage() {
         <Separator className="my-8" />
         
         <section id="software" className="py-8">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 className="font-headline text-3xl font-bold mb-4">Software Architecture</h2>
-                    <p className="text-muted-foreground">
-                        Hydrus is powered by a sophisticated software stack running on ROS (Robot Operating System). Our custom computer vision, state estimation, and path planning algorithms enable fully autonomous operation in complex underwater environments.
-                    </p>
-                </div>
-                <div>
-                    <Link href="#" target="_blank" rel="noopener noreferrer" className="group block">
-                        <Card className="overflow-hidden transition-shadow hover:shadow-xl">
-                            <CardHeader>
-                                <CardTitle>Software Stack</CardTitle>
-                            </CardHeader>
-                            <CardContent className="p-0">
-                                <div className="relative aspect-video">
-                                    <Image
-                                        src="https://placehold.co/800x450.png"
-                                        alt="Rumarino GitHub Repository"
-                                        fill
-                                        className="object-cover transition-transform group-hover:scale-105"
-                                        data-ai-hint="github repository screenshot"
-                                    />
-                                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                                        <span className="text-white font-bold text-lg opacity-0 group-hover:opacity-100 transition-opacity">Explore on GitHub</span>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-                    </Link>
-                </div>
+            <div className="max-w-5xl mx-auto">
+                <Link href="#" target="_blank" rel="noopener noreferrer" className="group block">
+                    <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all">
+                        <Image
+                            src="https://placehold.co/1200x675.png"
+                            alt="Rumarino GitHub Repository"
+                            fill
+                            className="object-cover transition-transform group-hover:scale-105"
+                            data-ai-hint="github repository screenshot"
+                        />
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+                            <span className="text-white font-bold text-xl opacity-0 group-hover:opacity-100 transition-opacity">Explore on GitHub</span>
+                        </div>
+                    </div>
+                </Link>
+            </div>
+            
+            <div className="max-w-4xl mx-auto mt-8">
+                <h2 className="font-headline text-3xl font-bold mb-4">Software Architecture</h2>
+                <p className="text-muted-foreground">
+                    Hydrus is powered by a sophisticated software stack running on ROS (Robot Operating System). Our custom computer vision, state estimation, and path planning algorithms enable fully autonomous operation in complex underwater environments.
+                </p>
             </div>
         </section>
 
