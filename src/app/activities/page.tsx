@@ -30,13 +30,48 @@ const activities = [
         type: 'image',
       },
       {
-        src: 'https://placehold.co/600x400.png',
-        hint: 'team presenting school',
+        src: '/outreach_3.jpg',
+        hint: 'students learning robotics',
         type: 'image',
       },
       {
-        src: 'https://placehold.co/600x400.png',
-        hint: 'excited children robots',
+        src: '/outreach_4.jpg',
+        hint: 'team teaching robotics',
+        type: 'image',
+      },
+      {
+        src: '/outreach_5.jpg',
+        hint: 'children with robots',
+        type: 'image',
+      },
+      {
+        src: '/outreach_6.jpg',
+        hint: 'team with students',
+        type: 'image',
+      },
+      {
+        src: '/outreach_7.jpg',
+        hint: 'students with AUV',
+        type: 'image',
+      },
+      {
+        src: '/outreach_8.jpg',
+        hint: 'team with school children',
+        type: 'image',
+      },
+      {
+        src: '/outreach_9.jpg',
+        hint: 'students excited about robotics',
+        type: 'image',
+      },
+      {
+        src: '/outreach_10.jpg',
+        hint: 'team with school kids',
+        type: 'image',
+      },
+      {
+        src: '/outreach_11.jpg',
+        hint: 'students learning about AUV',
         type: 'image',
       },
     ] as GalleryItem[],
