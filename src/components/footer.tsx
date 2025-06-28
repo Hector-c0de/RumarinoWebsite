@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Twitter, Instagram, Linkedin, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin, Twitter, Instagram, Linkedin, Facebook, Youtube } from 'lucide-react';
 import { Logo } from './logo';
 import Image from 'next/image';
 
@@ -41,6 +41,9 @@ const Footer = () => {
               </Link>
               <Link href="https://www.linkedin.com/company/rumarino" className="text-muted-foreground hover:text-accent transition-colors">
                 <Linkedin className="h-6 w-6" />
+              </Link>
+              <Link href="https://www.youtube.com/@rumarino5542" className="text-muted-foreground hover:text-accent transition-colors">
+                <Youtube className="h-6 w-6" />
               </Link>
             </div>
           </div>
