@@ -93,6 +93,16 @@ export default function CompetitionPage() {
             <h2 className="font-headline text-3xl md:text-4xl font-bold">RoboSub 2024</h2>
             <p className="text-muted-foreground pt-2 mb-8">A look back at our performance last year.</p>
 
+            <div className="aspect-video relative rounded-lg overflow-hidden shadow-lg mb-8">
+                <Image
+                    src="https://i.ytimg.com/vi/zGQymhIOxDs/maxresdefault.jpg"
+                    alt="RoboSub 2024 Competition"
+                    fill
+                    className="object-cover"
+                    data-ai-hint="underwater robot competition"
+                />
+            </div>
+
             <div className="space-y-8">
                 <div className="flex flex-col sm:flex-row gap-4">
                      <Button asChild>
