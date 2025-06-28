@@ -16,9 +16,14 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <Link href="/" className="flex items-center space-x-2">
-              <Logo className="h-10 w-10 text-accent" />
-              <span className="font-headline text-xl font-bold">Rumarino</span>
+            <Link href="/" className="flex items-center justify-center">
+              <Image
+                src="/logo_og.png"
+                alt="Rumarino"
+                width={120}
+                height={120}
+                className="object-contain"
+              />
             </Link>
             <p className="text-muted-foreground">
               Advancing autonomous underwater systems for a brighter, bluer future.
@@ -67,7 +72,7 @@ const Footer = () => {
             <div className="grid grid-cols-2 gap-4">
               {sponsors.map((sponsor) => (
                 <div key={sponsor.name} className="bg-muted p-2 rounded-md flex items-center justify-center">
-                   <Image
+                  <Image
                     src={sponsor.logoUrl}
                     alt={sponsor.name}
                     width={150}

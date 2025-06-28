@@ -21,9 +21,16 @@ export default function Home() {
         </video>
         <div className="absolute inset-0 bg-black/50 z-10" />
         <div className="relative z-20 text-center p-4">
-          <h1 className="font-headline text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter mb-4 text-shadow animate-fade-in-down">
-            RUMARINO
-          </h1>
+          <div className="flex justify-center items-center mb-4">
+            <Image
+              src="/logo_og.png"
+              alt="RUMARINO Logo"
+              width={480}
+              height={480}
+              className="mx-auto w-72 md:w-[28rem] lg:w-[32rem] h-auto drop-shadow-lg animate-fade-in-down"
+              priority
+            />
+          </div>
           <p className="font-body text-xl md:text-2xl max-w-2xl mx-auto text-primary-foreground/90">
             Diving into the future of autonomous underwater robotics.
           </p>
@@ -32,51 +39,51 @@ export default function Home() {
 
       <section id="about" className="w-full bg-background py-16 md:py-24">
         <div className="container mx-auto px-4">
-            <div className="text-center mb-12">
-                <h2 className="font-headline text-3xl font-bold text-accent md:text-5xl">
-                    Explore Our Team &amp; Technology
-                </h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <Link href="/team" className="group block">
-                    <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary/50 hover:-translate-y-1">
-                        <div className="relative aspect-video">
-                            <Image
-                                src="/outreach_1.jpg"
-                                alt="Rumarino Team"
-                                fill
-                                className="object-cover transition-transform group-hover:scale-105"
-                                data-ai-hint="robotics team group photo"
-                            />
-                        </div>
-                        <CardHeader>
-                            <CardTitle>Meet the Team</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <p className="text-muted-foreground">Discover the talented students and mentors driving our mission forward.</p>
-                        </CardContent>
-                    </Card>
-                </Link>
-                <Link href="/auvs" className="group block">
-                    <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary/50 hover:-translate-y-1">
-                        <div className="relative aspect-video">
-                            <Image
-                                src="/hydrus_photo_1.jpeg"
-                                alt="Hydrus AUV"
-                                fill
-                                className="object-cover transition-transform group-hover:scale-105"
-                                data-ai-hint="underwater robot vehicle"
-                            />
-                        </div>
-                        <CardHeader>
-                            <CardTitle>Explore Hydrus</CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <p className="text-muted-foreground">Dive into the technical specifications of our advanced AUV.</p>
-                        </CardContent>
-                    </Card>
-                </Link>
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="font-headline text-3xl font-bold text-accent md:text-5xl">
+              Explore Our Team &amp; Technology
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <Link href="/team" className="group block">
+              <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary/50 hover:-translate-y-1">
+                <div className="relative aspect-video">
+                  <Image
+                    src="/outreach_1.jpg"
+                    alt="Rumarino Team"
+                    fill
+                    className="object-cover transition-transform group-hover:scale-105"
+                    data-ai-hint="robotics team group photo"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle>Meet the Team</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Discover the talented students and mentors driving our mission forward.</p>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href="/auvs" className="group block">
+              <Card className="h-full overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary/50 hover:-translate-y-1">
+                <div className="relative aspect-video">
+                  <Image
+                    src="/hydrus_photo_1.jpeg"
+                    alt="Hydrus AUV"
+                    fill
+                    className="object-cover transition-transform group-hover:scale-105"
+                    data-ai-hint="underwater robot vehicle"
+                  />
+                </div>
+                <CardHeader>
+                  <CardTitle>Explore Hydrus</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Dive into the technical specifications of our advanced AUV.</p>
+                </CardContent>
+              </Card>
+            </Link>
+          </div>
         </div>
       </section>
 

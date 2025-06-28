@@ -22,11 +22,10 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-primary text-primary-foreground">
+    <header className="sticky top-0 z-50 w-full bg-black text-white">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-          <Logo className="h-8 w-8 text-accent" />
-          <span className="font-headline text-2xl font-bold hidden sm:inline-block">Rumarino</span>
+          <Logo className="h-12 w-24" />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
@@ -36,7 +35,7 @@ const Header = () => {
               href={link.href}
               className={cn(
                 'font-medium transition-colors',
-                pathname === link.href ? 'text-primary-foreground' : 'text-primary-foreground/80 hover:text-primary-foreground'
+                pathname === link.href ? 'text-white' : 'text-white/80 hover:text-white'
               )}
             >
               {link.label}
@@ -47,24 +46,19 @@ const Header = () => {
         <div className="md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-primary/90">
+              <Button variant="ghost" size="icon" className="text-white hover:bg-white/10">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-black text-white border-gray-800">
               <SheetHeader>
                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               </SheetHeader>
-              <div className="flex justify-between items-center mb-8">
-                 <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-                    <Logo className="h-8 w-8 text-accent" />
-                    <span className="font-headline text-2xl font-bold">Rumarino</span>
+              <div className="mb-8">
+                <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
+                  <Logo className="h-24 w-48" />
                 </Link>
-                <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)}>
-                  <X className="h-6 w-6" />
-                  <span className="sr-only">Close menu</span>
-                </Button>
               </div>
               <nav className="flex flex-col gap-6">
                 {navLinks.map((link) => (
@@ -73,8 +67,8 @@ const Header = () => {
                     href={link.href}
                     onClick={() => setIsOpen(false)}
                     className={cn(
-                      'text-lg font-medium text-muted-foreground transition-colors hover:text-accent',
-                      pathname === link.href && 'text-accent'
+                      'text-lg font-medium text-white/80 transition-colors hover:text-white',
+                      pathname === link.href && 'text-white'
                     )}
                   >
                     {link.label}

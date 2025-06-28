@@ -2,11 +2,12 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 export const Logo = ({ className }: { className?: string }) => (
-  <Image
-    src="/logo.jpeg"
-    alt="Rumarino Logo"
-    className={cn(className)}
-    width={32}
-    height={32}
-  />
+  <div className={cn("relative", className)}>
+    <Image
+      src="/logo_nobg.png"
+      alt="Rumarino Logo"
+      fill
+      className="object-contain"
+    />
+  </div>
 );
