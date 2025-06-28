@@ -93,13 +93,15 @@ export default function CompetitionPage() {
             <p className="text-muted-foreground pt-2 mb-8">A look back at our performance last year.</p>
 
             <div className="aspect-video relative rounded-lg overflow-hidden shadow-lg mb-8">
-              <Image
-                src="https://i.ytimg.com/vi/zGQymhIOxDs/maxresdefault.jpg"
-                alt="RoboSub 2024 Competition"
-                fill
-                className="object-cover"
-                data-ai-hint="underwater robot competition"
-              />
+              <iframe
+                src="https://www.youtube.com/embed/FxtfISYEmFo?si=YoCoqkS8nfvrFfpK"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              ></iframe>
             </div>
 
             <div className="space-y-8">
