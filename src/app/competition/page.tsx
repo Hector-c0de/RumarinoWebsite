@@ -20,7 +20,6 @@ const gallery2024: GalleryItem[] = [
     src: '/robosub_2024_1.mp4',
     hint: 'RoboSub 2024 recap video',
     type: 'video',
-    thumbnail: '/robosub_2024_2.jpg',
   },
   {
     src: '/robosub_2024_2.jpg',
@@ -31,7 +30,6 @@ const gallery2024: GalleryItem[] = [
     src: '/robosub_2024_3.mp4',
     hint: 'team working robot',
     type: 'video',
-    thumbnail: '/robosub_2024_2.jpg',
   },
   {
     src: 'https://placehold.co/400x400.png',
@@ -129,13 +127,24 @@ export default function CompetitionPage() {
                       className="relative aspect-video rounded-lg overflow-hidden group cursor-pointer shadow-lg hover:shadow-2xl transition-shadow"
                       onClick={() => setSelectedItem(item)}
                     >
-                      <Image
-                        src={item.type === 'video' ? item.thumbnail! : item.src}
-                        alt={`RoboSub 2024 gallery item ${idx + 1}`}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        data-ai-hint={item.hint}
-                      />
+                      {item.type === 'video' ? (
+                        <video
+                          src={item.src}
+                          className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          muted
+                          loop
+                          onMouseEnter={(e) => e.currentTarget.play()}
+                          onMouseLeave={(e) => e.currentTarget.pause()}
+                        />
+                      ) : (
+                        <Image
+                          src={item.src}
+                          alt={`RoboSub 2024 gallery item ${idx + 1}`}
+                          fill
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          data-ai-hint={item.hint}
+                        />
+                      )}
                       <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         {item.type === 'video' ? (
                           <PlayCircle className="h-12 w-12 text-white" />
