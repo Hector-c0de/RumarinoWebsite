@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Twitter, Instagram, Linkedin, Facebook } from 'lucide-react';
 import { Logo } from './logo';
 import Image from 'next/image';
 
@@ -30,13 +30,16 @@ const Footer = () => {
               Advancing autonomous underwater systems for a brighter, bluer future.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-muted-foreground hover:text-accent transition-colors">
+              <Link href="https://m.facebook.com/UPRMRUMarino/" className="text-muted-foreground hover:text-accent transition-colors">
+                <Facebook className="h-6 w-6" />
+              </Link>
+              <Link href="https://x.com/RUMarino_pr" className="text-muted-foreground hover:text-accent transition-colors">
                 <Twitter className="h-6 w-6" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-accent transition-colors">
+              <Link href="https://www.instagram.com/rumarino_hydrus" className="text-muted-foreground hover:text-accent transition-colors">
                 <Instagram className="h-6 w-6" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-accent transition-colors">
+              <Link href="https://www.linkedin.com/company/rumarino" className="text-muted-foreground hover:text-accent transition-colors">
                 <Linkedin className="h-6 w-6" />
               </Link>
             </div>
@@ -56,15 +59,11 @@ const Footer = () => {
             <ul className="space-y-3 text-muted-foreground">
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-3 shrink-0 text-accent" />
-                <a href="mailto:contact@rumarino.com" className="hover:text-accent transition-colors">contact@rumarino.com</a>
+                <a href="mailto:rumarino.uprm@gmail.com" className="hover:text-accent transition-colors">rumarino.uprm@gmail.com</a>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-3 shrink-0 text-accent" />
-                <span>+1 (123) 456-7890</span>
-              </li>
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 mr-3 shrink-0 text-accent mt-1" />
-                <span>University Robotics Lab,<br />123 Tech Drive, City, State</span>
+                <span>+1 (787) 648-3193</span>
               </li>
             </ul>
           </div>
