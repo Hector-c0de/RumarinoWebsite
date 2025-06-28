@@ -86,7 +86,7 @@ export default function Home() {
               <Card className="overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary/50 hover:-translate-y-1">
                 <div className="relative aspect-video">
                   <Image
-                    src="/outreach_1.jpg"
+                    src="/team.jpg"
                     alt="Rumarino Team at Outreach Event"
                     fill
                     className="object-cover transition-transform group-hover:scale-105"
