@@ -20,17 +20,18 @@ const gallery2024: GalleryItem[] = [
     src: '/robosub_2024_1.mp4',
     hint: 'RoboSub 2024 recap video',
     type: 'video',
-    thumbnail: 'https://placehold.co/1200x675.png',
+    thumbnail: '/robosub_2024_2.jpg',
   },
   {
-    src: 'https://placehold.co/400x400.png',
+    src: '/robosub_2024_2.jpg',
     hint: 'underwater robot action',
     type: 'image',
   },
   {
-    src: 'https://placehold.co/400x400.png',
+    src: '/robosub_2024_3.mp4',
     hint: 'team working robot',
-    type: 'image',
+    type: 'video',
+    thumbnail: '/robosub_2024_2.jpg',
   },
   {
     src: 'https://placehold.co/400x400.png',
