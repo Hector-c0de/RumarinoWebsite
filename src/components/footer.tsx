@@ -31,19 +31,19 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <Link href="https://m.facebook.com/UPRMRUMarino/" className="text-muted-foreground hover:text-accent transition-colors">
-                <Facebook className="h-6 w-6" />
+                <Facebook className="size-7" />
               </Link>
               <Link href="https://x.com/RUMarino_pr" className="text-muted-foreground hover:text-accent transition-colors">
-                <Twitter className="h-6 w-6" />
+                <Twitter className="size-7" />
               </Link>
               <Link href="https://www.instagram.com/rumarino_hydrus" className="text-muted-foreground hover:text-accent transition-colors">
-                <Instagram className="h-6 w-6" />
+                <Instagram className="size-7" />
               </Link>
               <Link href="https://www.linkedin.com/company/rumarino" className="text-muted-foreground hover:text-accent transition-colors">
-                <Linkedin className="h-6 w-6" />
+                <Linkedin className="size-7" />
               </Link>
               <Link href="https://www.youtube.com/@rumarino5542" className="text-muted-foreground hover:text-accent transition-colors">
-                <Youtube className="h-6 w-6" />
+                <Youtube className="size-7" />
               </Link>
             </div>
           </div>
