@@ -1,5 +1,6 @@
 export type TeamMember = {
   name: string;
+  position: string;
   photoUrl: string;
   year: string;
   major: string;
@@ -26,9 +27,11 @@ export const teams: Team[] = [
     teamImage: '/managment_team.jpeg',
     teamImageHint: 'Photo of the management team',
     members: [
-      { name: 'Analia', photoUrl: 'https://placehold.co/400x400/3B82F6/FFFFFF', hint: 'professional headshot', year: '4th', major: 'Business Administration', linkedinUrl: '#', email: 'mailto:alex.j@example.com', rotation: -90 },
-      { name: 'Mariela', photoUrl: 'https://placehold.co/400x400/3B82F6/FFFFFF', hint: 'professional headshot', year: '3rd', major: 'Marketing', linkedinUrl: '#', email: 'mailto:brenda.s@example.com', rotation: -90 },
-      { name: 'Luis', photoUrl: 'https://placehold.co/400x400/3B82F6/FFFFFF', hint: 'professional headshot', year: '4th', major: 'Finance', linkedinUrl: '#', email: 'mailto:charles.b@example.com', rotation: -90 },
+      { name: 'Analía Díaz', photoUrl: 'https://placehold.co/400x400/3B82F6/FFFFFF', hint: 'professional headshot', year: '4th',position: "Lead", major: 'Electrical Engineering', linkedinUrl: '#', email: 'mailto:analia.diaz@upr.edu', rotation: -90 },
+      { name: 'Mariela A. Rivera', photoUrl: 'https://placehold.co/400x400/3B82F6/FFFFFF', hint: 'professional headshot', year: '5th',position: "Member", major: 'Civil Engineering', linkedinUrl: '#', email: 'mailto:brenda.s@example.com', rotation: -90 },
+      { name: 'Luis E Colón', photoUrl: 'https://placehold.co/400x400/3B82F6/FFFFFF', hint: 'professional headshot', year: '4th',position: "Member", major: 'Software Engineering', linkedinUrl: '#', email: 'mailto:charles.b@example.com', rotation: -90 },
+      { name: 'Héctor Quiñones', photoUrl: '/Hector.jpg', hint: 'student headshot', year: '4th',position: "Member", major: 'Computer Engineering', linkedinUrl: '#', email: 'mailto:hector.quinones18@upr.edu', rotation: -90 },
+      { name: 'Yeniel M. Resto', photoUrl: '/Hector.jpg', hint: 'student headshot', year: '5th',position: "Member", major: 'Computer Engineering', linkedinUrl: '#', email: 'mailto:yeniel.resto@upr.edu', rotation: -90 },
     ],
   },
   {
@@ -38,14 +41,15 @@ export const teams: Team[] = [
     teamImage: '/computer_system_team.jpeg',
     teamImageHint: 'students coding computer lab',
     members: [
-      { name: 'Cesar', photoUrl: '/cesar.jpg', hint: 'student headshot', year: '3rd', major: 'Computer Science', linkedinUrl: '#', email: 'mailto:cesar@example.com', rotation: -90 },
-      { name: 'Edyan', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '2nd', major: 'Software Engineering', linkedinUrl: '#', email: 'mailto:edyan@example.com', rotation: -90 },
-      { name: 'Hector', photoUrl: '/Hector.jpg', hint: 'student headshot', year: '4th', major: 'Computer Engineering', linkedinUrl: '#', email: 'mailto:hector@example.com', rotation: -90 },
-      { name: 'Gabriela', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd', major: 'Computer Science', linkedinUrl: '#', email: 'mailto:gabriela@example.com', rotation: -90 },
-      { name: 'Javier', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd', major: 'Computer Science', linkedinUrl: '#', email: 'mailto:javier@example.com', rotation: -90 },
-      { name: 'Elian', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd', major: 'Computer Science', linkedinUrl: '#', email: 'mailto:elian@example.com', rotation: -90 },
-      { name: 'kristian', photoUrl: '/kristian.jpg', hint: 'student headshot', year: '3rd', major: 'Computer Science', linkedinUrl: '#', email: 'mailto:elian@example.com', rotation: -90 },
-
+      { name: 'Cesar Ruíz', photoUrl: '/cesar.jpg', hint: 'student headshot', year: '4th',position: "Captain & Computer Vision Lead", major: 'Software Engineering', linkedinUrl: '#', email: 'mailto:cesar.ruiz6@upr.edu', rotation: -90 },
+      { name: 'Edyan A. Cruz', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '4th',position: "Software Architecture & Simulations Lead", major: 'Software Engineering', linkedinUrl: '#', email: 'mailto:edyan.cruz@upr.edu', rotation: -90 },
+      { name: 'Diego Quiñones', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '4th',position: "Embedded Systems Lead", major: 'Computer Science', linkedinUrl: '#', email: 'mailto:gabriela.david1@upr.edu', rotation: -90 },
+      { name: 'Héctor Quiñones', photoUrl: '/Hector.jpg', hint: 'student headshot', year: '4th',position: "Member", major: 'Computer Engineering', linkedinUrl: '#', email: 'mailto:hector.quinones18@upr.edu', rotation: -90 },
+      { name: 'Gabriela David', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd',position: "Member", major: 'Computer Engineering', linkedinUrl: '#', email: 'mailto:gabriela.david1@upr.edu', rotation: -90 },
+      { name: 'Javier Rivera', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd',position: "Member", major: 'Computer Science', linkedinUrl: '#', email: 'mailto:javier.rivera97@upr.edu', rotation: -90 },
+      { name: 'Elian E. Soto', photoUrl: 'https://placehold.co/400x400/8B5CF6/FFFFFF', hint: 'student headshot', year: '3rd',position: "Member", major: 'Computer Science', linkedinUrl: '#', email: 'mailto:elian.soto@upr.edu', rotation: -90 },
+      { name: 'Kristian López', photoUrl: '/kristian.jpg', hint: 'student headshot', year: '3rd',position: "Member", major: 'Computer Science', linkedinUrl: 'http://www.linkedin.com/in/kristian-lopez-massas', email: 'mailto:kristian.lopez2@upr.edu', rotation: -90 },
+      { name: 'Robert E. Ortiz', photoUrl: '/kristian.jpg', hint: 'student headshot', year: '3rd',position: "Member", major: 'Computer Science', linkedinUrl: '#', email: 'mailto:robert.ortiz6@upr.edu', rotation: -90 },
     ],
   },
   {
@@ -55,14 +59,17 @@ export const teams: Team[] = [
     teamImage: '/mechanical_team.jpeg',
     teamImageHint: 'engineering students workshop',
     members: [
-      { name: 'David', photoUrl: '/david.jpg', hint: 'engineer headshot', year: '4th', major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:david@example.com', rotation: -90 },
-      { name: 'Veronica', photoUrl: '/veronica.jpg', hint: 'engineer headshot', year: '3rd', major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:veronica@example.com', rotation: -90 },
-      { name: 'Anibal', photoUrl: 'https://placehold.co/400x400/F97316/FFFFFF', hint: 'engineer headshot', year: '2nd', major: 'Aerospace Engineering', linkedinUrl: '#', email: 'mailto:anibal@example.com', rotation: -90 },
-      { name: 'Ricardo', photoUrl: '/ricardo.jpg', hint: 'engineer headshot', year: '3rd', major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:carlos@example.com', rotation: -90 },
-      { name: 'Alejandro', photoUrl: '/alejandro.jpg', hint: 'engineer headshot', year: '3rd', major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:carlos@example.com', rotation: -90 },
-      { name: 'Lisangelie', photoUrl: '/lizmari.jpg', hint: 'engineer headshot', year: '3rd', major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:carlos@example.com', rotation: -90 },
-      { name: 'Ashley', photoUrl: '/lizmari.jpg', hint: 'engineer headshot', year: '3rd', major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:carlos@example.com', rotation: -90 }
-      
+      { name: 'David A. Torres', photoUrl: '/david.jpg', hint: 'engineer headshot', year: '4th',position: "R&D Lead", major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:david.torres18@upr.edu', rotation: -90 },
+      { name: 'Ricardo G. Perez', photoUrl: '/ricardo.jpg', hint: 'engineer headshot', year: '4th',position: "Maintenence Lead", major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:ricardo.perez39@upr.edu', rotation: -90 },
+      { name: 'Anibal Rosado', photoUrl: 'https://placehold.co/400x400/F97316/FFFFFF', hint: 'engineer headshot', year: '4th',position: "Captain & Member", major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:anibal.rosado5@upr.edu', rotation: -90 },
+      { name: 'Veronica Franco', photoUrl: '/veronica.jpg', hint: 'engineer headshot', year: '3rd',position: "Member", major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:veronica.franco1@upr.edu', rotation: -90 },
+      { name: 'Alejandro González', photoUrl: '/alejandro.jpg', hint: 'engineer headshot', year: '5th',position: "Member", major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:alejandro.gonzalez32@upr.edu', rotation: -90 },
+      { name: 'Lisangelie Flores', photoUrl: '/lizmari.jpg', hint: 'engineer headshot', year: '3rd',position: "Member", major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:lisangelie.flores@upr.edu', rotation: -90 },
+      { name: 'Ashley Martin', photoUrl: '/lizmari.jpg', hint: 'engineer headshot', year: '3rd',position: "Member", major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:ashley.martin1@upr.edu', rotation: -90 },
+      { name: 'Luis M. Martinez', photoUrl: '/lizmari.jpg', hint: 'engineer headshot', year: '3rd',position: "Member", major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:luis.colon156@upr.edu', rotation: -90 },
+      { name: 'Gabriela Torres', photoUrl: '/lizmari.jpg', hint: 'engineer headshot', year: '3rd',position: "Member", major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:gabriela.torres57@upr.edu', rotation: -90 },
+      { name: 'Kevin Pérez', photoUrl: '/lizmari.jpg', hint: 'engineer headshot', year: '3rd',position: "Member", major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:kevin.perez38@upr.edu', rotation: -90 },
+      { name: 'Ignacio Bautista', photoUrl: '/lizmari.jpg', hint: 'engineer headshot', year: '3rd',position: "Member", major: 'Mechanical Engineering', linkedinUrl: '#', email: 'mailto:ignacio.bautista@upr.edu', rotation: -90 },
     ],
   },
   {
@@ -72,11 +79,13 @@ export const teams: Team[] = [
     teamImage: '/electrical_team.jpeg',
     teamImageHint: 'electronics lab circuit board',
     members: [
-      { name: 'Victor', photoUrl: '/victor.jpg', hint: 'technician headshot', year: 'Dinasour', major: 'Electrical Engineering', linkedinUrl: '#', email: 'mailto:victor@example.com', rotation: -90 },
-      { name: 'Mia', photoUrl: '/mia.jpg', hint: 'technician headshot', year: '4th', major: 'Electrical Engineering', linkedinUrl: '#', email: 'mailto:mia@example.com', rotation: -90 },
-      { name: 'Angel', photoUrl: '/angel.jpg', hint: 'technician headshot', year: '2nd', major: 'Computer Engineering', linkedinUrl: '#', email: 'mailto:angel@example.com', rotation: -90 },
-      { name: 'Natalia', photoUrl: '/natalia.jpg', hint: 'technician headshot', year: '2nd', major: 'Computer Engineering', linkedinUrl: '#', email: 'mailto:natalia@example.com', rotation: -90 },
-      { name: 'Jaimel ', photoUrl: '/natalia.jpg', hint: 'technician headshot', year: '2nd', major: 'Computer Engineering', linkedinUrl: '#', email: 'mailto:natalia@example.com', rotation: -90 },
+      { name: 'Victor O. Riefkohl', photoUrl: '/victor.jpg', hint: 'technician headshot', year: '7th',position: "Lead", major: 'Electrical Engineering', linkedinUrl: '#', email: 'mailto:victor.riefkohl@upr.edu', rotation: -90 },
+      { name: 'Mia S. Figueroa', photoUrl: '/mia.jpg', hint: 'technician headshot', year: '5th',position: "Member", major: 'Electrical Engineering', linkedinUrl: '#', email: 'mailto:mia.figueroa1@upr.edu', rotation: -90 },
+      { name: 'Angel Cintrón', photoUrl: '/angel.jpg', hint: 'technician headshot', year: '6th',position: "Member", major: 'Electrical Engineering', linkedinUrl: '', email: 'mailto:angel.cintron19@upr.edu', rotation: -90 },
+      { name: 'Nathalie Moreno', photoUrl: '/natalia.jpg', hint: 'technician headshot', year: '2nd',position: "Member", major: 'Electrical Engineering', linkedinUrl: '#', email: 'mailto:nathalie.moreno@upr.edu', rotation: -90 },
+      { name: 'Jaimel E. Martinez', photoUrl: '/natalia.jpg', hint: 'technician headshot', year: '7th',position: "Member", major: 'Electrical Engineering', linkedinUrl: '#', email: 'mailto:jaimel.martinez@upr.edu', rotation: -90 },
+      { name: 'Aidelís León', photoUrl: '/natalia.jpg', hint: 'technician headshot', year: '2nd',position: "Member", major: 'Electrical Engineering', linkedinUrl: '#', email: 'mailto:aidelis.leon@upr.edu', rotation: -90 },
+      { name: 'Ronald R. Bosques', photoUrl: '/natalia.jpg', hint: 'technician headshot', year: '6th',position: "Member", major: 'Electrical Engineering', linkedinUrl: '#', email: 'mailto:ronald.bosques@upr.edu', rotation: -90 }
     ],
   },
 ];

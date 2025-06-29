@@ -73,9 +73,10 @@ export default function TeamDetailPage({ params }: TeamDetailPageProps) {
                 </div>
                 <CardContent className="p-4 flex flex-col flex-grow">
                   <h3 className="font-bold text-lg">{member.name}</h3>
+                  <p className="font-bold text-sm text-muted-foreground">{member.position}</p>
                   <p className="text-sm text-muted-foreground">{member.major}</p>
                   <Badge variant="secondary" className="mt-2">
-                    {/^\d/.test(member.year) ? `${member.year} Year` : member.year}
+                    {/^\d/.test(member.year) ? `${member.year} year` : member.year}
                   </Badge>
                   <div className="mt-auto pt-4 flex justify-center gap-4">
                     {member.linkedinUrl && (
