@@ -27,7 +27,7 @@ export const teams: Team[] = [
     teamImage: '/managment_team.jpeg',
     teamImageHint: 'Photo of the management team',
     members: [
-      { name: 'Analía Díaz', photoUrl: 'https://placehold.co/400x400/3B82F6/FFFFFF', hint: 'professional headshot', year: '4th',position: "Lead", major: 'Electrical Engineering', linkedinUrl: '#', email: 'mailto:analia.diaz@upr.edu', rotation: -90 },
+      { name: 'Analía Díaz', photoUrl: '/Analia.jpg', hint: 'professional headshot', year: '4th',position: "Lead", major: 'Electrical Engineering', linkedinUrl: '#', email: 'mailto:analia.diaz@upr.edu', rotation: -90 },
       { name: 'Mariela A. Rivera', photoUrl: 'https://placehold.co/400x400/3B82F6/FFFFFF', hint: 'professional headshot', year: '5th',position: "Member", major: 'Civil Engineering', linkedinUrl: '#', email: 'mailto:brenda.s@example.com', rotation: -90 },
       { name: 'Luis E Colón', photoUrl: 'https://placehold.co/400x400/3B82F6/FFFFFF', hint: 'professional headshot', year: '4th',position: "Member", major: 'Software Engineering', linkedinUrl: '#', email: 'mailto:charles.b@example.com', rotation: -90 },
       { name: 'Héctor Quiñones', photoUrl: '/Hector.jpg', hint: 'student headshot', year: '4th',position: "Member", major: 'Computer Engineering', linkedinUrl: '#', email: 'mailto:hector.quinones18@upr.edu', rotation: -90 },
