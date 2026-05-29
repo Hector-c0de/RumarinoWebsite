@@ -79,7 +79,7 @@ const gallery2024: any[] = [
     type: 'video',
   },
   {
-	src: '/competition/robosub_2024_2.jpg',
+	src: '/competition/robosub_2024_2.webp',
     hint: 'underwater robot action',
     type: 'image',
   },
@@ -89,32 +89,32 @@ const gallery2024: any[] = [
     type: 'video',
   },
   {
-	src: '/competition/robosub_2024_4.jpg',
+	src: '/competition/robosub_2024_4.webp',
     hint: 'team celebrating success',
     type: 'image',
   },
   {
-	src: '/competition/robosub_2024_5.jpg',
+	src: '/competition/robosub_2024_5.webp',
     hint: 'team at competition',
     type: 'image',
   },
   {
-	src: '/competition/robosub_2024_6.jpg',
+	src: '/competition/robosub_2024_6.webp',
     hint: 'robot performing tasks',
     type: 'image',
   },
   {
-	src: '/competition/robosub_2024_7.jpg',
+	src: '/competition/robosub_2024_7.webp',
     hint: 'team strategizing',
     type: 'image',
   },
   {
-	src: '/competition/robosub_2024_8.jpg',
+	src: '/competition/robosub_2024_8.webp',
     hint: 'robot in action',
     type: 'image',
   },
   {
-	src: '/competition/robosub_2024_9.jpg',
+	src: '/competition/robosub_2024_9.webp',
     hint: 'team celebrating success',
     type: 'image',
   },
@@ -124,7 +124,7 @@ const gallery2024: any[] = [
     type: 'video',
   },
   {
-	src: '/competition/robosub_2024_11.jpg',
+	src: '/competition/robosub_2024_11.webp',
     hint: 'team celebrating victory',
     type: 'image',
   },
@@ -456,7 +456,7 @@ export default function CompetitionPage() {
                 <Button asChild size="lg" variant="outline" className="group border-[#51DFC9]/30 hover:border-[#1FB355]">
                   <Link 
                   href="/documents/RUMarino TDR 2024.pdf"
-                    className="gap-3 font-roboto font-medium text-[#51DFC9] hover:text-white px-8 py-6 rounded-xl"
+                    className="gap-3 font-roboto font-bold bg-gradient-to-r from-[#1FB355] to-[#00A68C] hover:from-[#00A68C] hover:to-[#51DFC9] text-white px-6 py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
                   >
                     <FileText className="h-5 w-5" />
                     <span>View 2024 TDR</span>

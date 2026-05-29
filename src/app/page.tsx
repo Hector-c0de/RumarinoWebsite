@@ -84,7 +84,7 @@ export default function Home() {
           </div>
           
           <div className="relative z-20 text-center px-4 md:px-6 lg:px-16 max-w-4xl mx-auto">
-          <h1 className="font-headline text-2xl md:text-4xl lg:text-5xl tracking-wide mb-4">
+          <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl tracking-wide mb-10 leading-none">
           <span className="bg-gradient-to-r from-[#1FB355] via-[#00A68C] to-[#51DFC9] bg-clip-text text-transparent">
             WE OWN THE DEPTHS
           </span>
@@ -440,10 +440,10 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button asChild className="group">
                   <Link 
-                    href="/join" 
+                    href="https://tally.so/r/pbOZ8b" 
                     className="gap-4 font-roboto font-bold bg-gradient-to-r from-[#00A68C] to-[#51DFC9] hover:from-[#51DFC9] hover:to-[#00A68C] text-white px-8 py-7 rounded-2xl shadow-xl hover:shadow-[#00A68C]/40 transition-all duration-300 transform hover:-translate-y-1 text-lg"
                   >
-                    <span>Apply to Join 2025 Squad</span>
+                    <span>Apply to Join 2026 Squad</span>
                     <Users className="h-5 w-5" />
                   </Link>
                 </Button>
