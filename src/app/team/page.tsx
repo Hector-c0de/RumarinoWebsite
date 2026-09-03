@@ -79,7 +79,7 @@ export default function TeamPage() {
                       <div className="flex items-center gap-2">
                         <Users className="h-4 w-4 text-gray-400" />
                         <span className="font-roboto text-sm text-gray-400">
-                          {division.members.length} miembros
+                          {division.members.length} members
                         </span>
                       </div>
                       
@@ -128,7 +128,7 @@ export default function TeamPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {leadership.slice(0, 6).map((member) => (
+            {leadership.map((member) => (
               <div 
                 key={member.name}
                 className="bg-gray-800/50 rounded-2xl p-6 border border-gray-700/50 hover:border-[#00A68C]/30 transition-all duration-300 hover:shadow-xl hover:shadow-[#00A68C]/10 backdrop-blur-sm"

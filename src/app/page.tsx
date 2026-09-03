@@ -77,9 +77,8 @@ export default function Home() {
             loop
             muted
             playsInline
-            className="absolute top-1/2 left-1/2 h-auto w-auto max-w-none max-h-none -translate-x-1/2 -translate-y-1/2 rotate-[270deg]"
           >
-			<source src="/videos/Background_Effect.mp4" type="video/mp4" />
+			<source src="/videos/Home_Background.mp4" type="video/mp4" />
           </video>
           </div>
           
