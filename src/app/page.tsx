@@ -31,7 +31,7 @@ export default function Home() {
     { 
       title: "Mission Planning", 
       description: "Autonomous path planning and dynamic mission execution with obstacle avoidance and adaptive control",
-      image: "/autonomy-docs/_images/navigation.png",
+      image: "/autonomy-docs/_images/electrical.jpeg",
       link: "/software/docs?doc=mission-executor.html" 
     },
     { 
