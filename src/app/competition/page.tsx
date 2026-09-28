@@ -357,12 +357,11 @@ export default function CompetitionPage() {
                           ) : (
                             <Image
                               src={item.src}
-                              alt={item.hint}
+                              alt="RUMarino RoboSub 2025 competition"
                               fill
                               loading="lazy"
                               sizes="(max-width: 768px) 50vw, 25vw"
                               className="object-cover transition-transform duration-500 group-hover:scale-110"
-                              data-ai-hint={item.hint}
                             />
                           )}
                           
@@ -376,9 +375,7 @@ export default function CompetitionPage() {
                             </div>
                           </div>
                           
-                          <div className="absolute bottom-0 left-0 right-0 p-3 bg-gradient-to-t from-[#171919] to-transparent transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                            <p className="font-roboto text-white text-sm truncate">{item.hint}</p>
-                          </div>
+                          
                         </div>
                       ))}
                     </div>
@@ -409,7 +406,7 @@ export default function CompetitionPage() {
             </div>
             <div className="relative flex justify-center">
               <div className="bg-gradient-to-r from-[#00A68C] to-[#51DFC9] px-6 py-2 rounded-full text-white font-roboto font-bold text-sm tracking-wide">
-                2024 → 2025
+                2025 → 2024
               </div>
             </div>
           </div>
@@ -583,11 +580,10 @@ export default function CompetitionPage() {
               {selectedItem.type === 'image' ? (
                 <Image
                   src={selectedItem.src}
-                  alt={selectedItem.hint}
+                  alt="RUMarino RoboSub 2025 competition"
                   width={1200}
                   height={800}
                   className="w-full h-auto max-h-[85vh] object-contain rounded-2xl shadow-2xl"
-                  data-ai-hint={selectedItem.hint}
                 />
               ) : (
                 <video
@@ -597,11 +593,7 @@ export default function CompetitionPage() {
                   className="w-full h-auto max-h-[85vh] object-contain rounded-2xl shadow-2xl"
                 />
               )}
-              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
-                <span className="font-roboto bg-[#171919]/80 backdrop-blur-sm px-4 py-2 rounded-full text-[#51DFC9] text-sm">
-                  {selectedItem.hint}
-                </span>
-              </div>
+             
             </div>
           )}
         </DialogContent>
