@@ -40,26 +40,10 @@ next-env.d.ts
 .genkit/*
 .env*
 .venv
+public/autonomy-docs
 # firebase
 firebase-debug.log
 firestore-debug.log
 docs/_build
 public/robosub2025/*
-
-public/autonomy-docs/*
-!public/autonomy-docs/_images/
-public/autonomy-docs/_images/*
-
-!public/autonomy-docs/_images/electrical_working1.webp
-!public/robosub2025/RoboSub2025Dump (4).jpg
-!public/robosub2025/RoboSub2025Dump (8).MOV
-!public/robosub2025/RoboSub2025Dump (20).MP4
-!public/robosub2025/RoboSub2025Dump (32).MP4
-!public/robosub2025/RoboSub2025Dump (37).MP4
-!public/robosub2025/RoboSub2025Dump (47).MP4
-!public/robosub2025/RoboSub2025Dump (56).MP4
-!public/robosub2025/RoboSub2025Dump (65).MP4
-!public/robosub2025/RoboSub2025Dump (69).JPEG
-!public/robosub2025/RoboSub2025Dump (183).MOV
-!public/robosub2025/RoboSub2025Dump (246).JPEG
-!public/robosub2025/RoboSub2025Dump (305).MOV
+public/robosub2025/*
