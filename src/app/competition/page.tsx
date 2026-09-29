@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { FileText, Trophy, Video, Camera, Search, PlayCircle, Users, ChevronDown, ExternalLink } from "lucide-react";
+import { FileText, Trophy, Video, Camera, Search, PlayCircle, Users, ChevronDown, ExternalLink, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
@@ -575,9 +575,18 @@ export default function CompetitionPage() {
           <DialogHeader className="sr-only">
             <DialogTitle>Expanded Media View</DialogTitle>
           </DialogHeader>
+
           {selectedItem && (
             <div className="relative">
-              {selectedItem.type === 'image' ? (
+              {/* Close Button */}
+              <button
+              onClick={() => setSelectedItem(null)}
+              className="absolute top-4 right-4 z-50 flex h-11 w-11 items-center justify-center rounded-full bg-black/70 text-white shadow-lg backdrop-blur-sm transition-all duration-200 hover:bg-black hover:scale-110"
+              aria-label="Close expanded view"
+              >
+                <X className="h-6 w-6" />
+                </button>
+                {selectedItem.type === 'image' ? (
                 <Image
                   src={selectedItem.src}
                   alt="RUMarino RoboSub 2025 competition"
